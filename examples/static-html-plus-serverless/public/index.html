@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brevo Lead Capture Example</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <form id="lead-form">
+        <h1>Request Information</h1>
+        <label>
+          Email
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+        <label>
+          First name
+          <input name="firstName" autocomplete="given-name">
+        </label>
+        <label>
+          Last name
+          <input name="lastName" autocomplete="family-name">
+        </label>
+        <label>
+          Phone
+          <input name="phone" autocomplete="tel">
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <label class="hp" aria-hidden="true">
+          Company
+          <input name="company" tabindex="-1" autocomplete="off">
+        </label>
+        <input name="source" type="hidden" value="static-html-form">
+        <button type="submit">Submit</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

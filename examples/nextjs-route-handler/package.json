@@ -1,0 +1,8 @@
+{
+  "name": "brevo-nextjs-route-handler-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

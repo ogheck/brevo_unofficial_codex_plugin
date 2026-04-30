@@ -30,6 +30,7 @@ RAW_SECRET_PATTERNS = (
 ENV_ASSIGNMENT_PATTERN = re.compile(r"\b(BREVO_API_KEY|BREVO_MCP_TOKEN)\s*=\s*(['\"])(.*?)\2")
 SAFE_PLACEHOLDER_VALUES = {
     "",
+    "test-key",
     "your-token",
     "your-api-key",
     "replace-me",

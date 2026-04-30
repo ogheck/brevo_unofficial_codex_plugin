@@ -5,6 +5,8 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 ## Static Checks
 
 - Run `python3 scripts/validate_plugin.py`.
+- Run `python3 scripts/check_markdown_links.py`.
+- Run `python3 scripts/test_examples.py`.
 - Confirm plugin manifest, marketplace JSON, and MCP config parse as valid JSON.
 - Confirm no Brevo API key or MCP token is committed.
 - Confirm `.mcp.json` does not include campaign send, schedule, SMS, or WhatsApp campaign servers.
@@ -31,11 +33,12 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Confirm examples validate inputs before calling Brevo.
 - Confirm examples handle duplicate contact behavior.
 - Confirm examples return safe public error messages.
+- Confirm examples keep sends, schedules, and automation activation outside Codex.
 
 ## Versioning
 
 - Update `plugins/brevo-helper/.codex-plugin/plugin.json`.
 - Update `PROJECT_ROADMAP.md`.
-- Add or update changelog notes once a changelog file exists.
+- Add or update `CHANGELOG.md`.
 - Commit changes with a focused release message.
 - Tag the release only after static checks and manual smoke tests pass.

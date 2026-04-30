@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f5f7f8;
+  color: #18201d;
+}
+
+main {
+  width: min(100% - 32px, 520px);
+  margin: 48px auto;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #d9e1df;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #bec9c6;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 14px;
+  color: #ffffff;
+  background: #0b996e;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+#form-status {
+  min-height: 1.25rem;
+  margin: 0;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "brevo-express-endpoint-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

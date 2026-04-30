@@ -1,0 +1,8 @@
+{
+  "name": "brevo-cloudflare-worker-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

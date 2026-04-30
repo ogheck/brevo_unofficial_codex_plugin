@@ -28,6 +28,25 @@ Inspect the project before changing code:
 - Return user-safe errors from public endpoints; do not leak Brevo API errors or secrets.
 - Add spam controls where appropriate, such as honeypot fields, rate limits, or Turnstile.
 
+## Runtime Patterns
+
+Prefer the repo examples when they fit the target project:
+
+- `examples/cloudflare-pages-function/`
+- `examples/cloudflare-worker/`
+- `examples/nextjs-route-handler/`
+- `examples/express-endpoint/`
+- `examples/static-html-plus-serverless/`
+
+## Prompt Examples
+
+Handle prompts like:
+
+- "Connect this form to Brevo safely."
+- "Add a backend endpoint that creates Brevo contacts."
+- "Wire newsletter signups to a Brevo list."
+- "Audit this app for browser-exposed Brevo secrets."
+
 ## Verification Checklist
 
 When possible, verify:
@@ -40,7 +59,7 @@ When possible, verify:
 - Duplicate submissions do not break the flow.
 - User-facing success and error states are clear.
 
-## Output
+## Output Structure
 
 When done, include:
 
@@ -49,3 +68,5 @@ When done, include:
 - Environment variables required.
 - Verification performed.
 - Any Brevo dashboard setup still needed, such as sender/domain authentication.
+
+End with a "Manual Brevo Handoff" section for list, attribute, sender, domain, template, or automation steps the user must complete inside Brevo.

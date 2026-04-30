@@ -32,6 +32,28 @@ Check for:
 - UTM and attribution consistency.
 - Mobile-readable layout and plain-text fallback where available.
 
+## Output Structure
+
+Use this standard section order:
+
+1. Readiness Verdict.
+2. Blocking Issues.
+3. Recommended Improvements.
+4. Brevo Setup Checks.
+5. Test Plan.
+6. Manual Brevo Handoff.
+
+If no blocking issues are found, say that clearly and still include the test-send checklist for the Brevo dashboard.
+
+## Prompt Examples
+
+Handle prompts like:
+
+- "Review this Brevo email before I send it."
+- "QA this campaign subject, preheader, and CTA."
+- "Check whether this template is ready for Brevo."
+- "Look at my sender/domain setup before launch."
+
 ## No Direct Sending
 
 Do not send, schedule, launch, resend, or submit campaigns from Codex, even if the user asks casually. Keep the final send/schedule action in the Brevo dashboard.

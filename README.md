@@ -60,6 +60,14 @@ For websites or apps that call Brevo directly, use a separate server-side runtim
 
 Keep Brevo API keys out of frontend JavaScript, static HTML, public environment variables, and `NEXT_PUBLIC_` variables.
 
+Backend templates are available in:
+
+- `examples/cloudflare-pages-function/`
+- `examples/cloudflare-worker/`
+- `examples/nextjs-route-handler/`
+- `examples/express-endpoint/`
+- `examples/static-html-plus-serverless/`
+
 ## No Direct Sending From Codex
 
 This plugin is intentionally not a Brevo send operator.
@@ -90,6 +98,16 @@ Codex should:
 ## Safety Defaults
 
 The bundled skills prohibit direct sending from Codex. They require explicit confirmation before bulk importing or deleting contacts, or changing sender/domain/webhook configuration.
+
+## Project Docs
+
+- `docs/no-direct-send-policy.md`
+- `docs/brevo-token-setup.md`
+- `docs/backend-patterns.md`
+- `docs/drip-campaign-workflow.md`
+- `docs/site-integration-workflow.md`
+- `docs/testing.md`
+- `docs/release-checklist.md`
 
 ## References
 

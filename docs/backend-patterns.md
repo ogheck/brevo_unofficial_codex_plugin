@@ -32,6 +32,11 @@ Recommended behavior:
 - Map only known contact attributes.
 - Avoid logging full request bodies with personal data.
 
+Brevo API references:
+
+- Create contact: https://developers.brevo.com/reference/create-contact
+- Update contact: https://developers.brevo.com/reference/updatecontact
+
 ## Public Response Handling
 
 Return safe messages:
@@ -49,9 +54,9 @@ Do not return raw Brevo errors to the browser.
 Current templates:
 
 - `examples/cloudflare-pages-function/`
-
-Planned templates:
-
 - `examples/cloudflare-worker/`
 - `examples/nextjs-route-handler/`
 - `examples/express-endpoint/`
+- `examples/static-html-plus-serverless/`
+
+Each template follows the same core contract: browser-visible code posts form JSON to a backend endpoint, and only backend code calls Brevo with `BREVO_API_KEY`.

@@ -36,6 +36,26 @@ Produce:
 - Brevo dashboard handoff checklist.
 - QA checklist before the user submits or schedules in Brevo.
 
+Use this standard section order unless the user asks for a different format:
+
+1. Campaign Brief.
+2. Audience And Trigger.
+3. Sequence Plan.
+4. Message Drafts.
+5. Brevo Assets Needed.
+6. Backend Requirements.
+7. QA Checklist.
+8. Manual Brevo Handoff.
+
+## Prompt Examples
+
+Handle prompts like:
+
+- "Create a 4-email welcome sequence for a home service lead form."
+- "Build a Brevo nurture campaign for free estimate requests."
+- "Draft winback emails for inactive customers."
+- "Map the backend events and contact attributes needed for this drip."
+
 ## Backend Guidance
 
 - Keep Brevo runtime API keys server-side only.

@@ -51,6 +51,26 @@ For risky non-send writes, summarize the exact action, target IDs or names, expe
 5. Verify with local tests, route checks, and Brevo readback where possible.
 6. Report what changed, what was verified, and the exact Brevo dashboard actions the user must perform manually.
 
+## Routing Examples
+
+Use `brevo-site-integration` for prompts like:
+
+- "Connect this contact form to Brevo."
+- "Add newsletter signups to my Brevo list."
+- "Build the backend for Brevo lead capture."
+
+Use `brevo-drip-builder` for prompts like:
+
+- "Build a welcome sequence in Brevo."
+- "Draft a 5-email nurture campaign."
+- "Plan a winback drip campaign."
+
+Use `brevo-campaign-qa` for prompts like:
+
+- "Review this Brevo campaign before I send it."
+- "Check this template for missing variables."
+- "QA my sender/domain setup."
+
 ## Common Outputs
 
 For audits, return:
@@ -67,3 +87,5 @@ For implementations, return:
 - Brevo list/template/webhook IDs used.
 - Verification steps completed.
 - Manual Brevo dashboard handoff steps.
+
+Always include a short "Manual Brevo Handoff" section when the next step involves a live Brevo action.

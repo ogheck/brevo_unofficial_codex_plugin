@@ -8,9 +8,10 @@ Run:
 
 ```bash
 python3 scripts/validate_plugin.py
+python3 scripts/check_markdown_links.py
 ```
 
-This checks:
+The plugin validator checks:
 
 - Plugin manifest JSON.
 - Marketplace JSON.
@@ -19,16 +20,42 @@ This checks:
 - No direct campaign-management, SMS, or WhatsApp send-capable MCP endpoint is bundled by default.
 - No obvious Brevo token has been committed.
 
+The markdown link checker verifies local Markdown links point at files inside this repository.
+
 ## Example Endpoint Tests
 
-For the Cloudflare Pages Function template:
+Run every example suite:
+
+```bash
+python3 scripts/test_examples.py
+```
+
+If your system `node` is not usable, set `NODE_BIN`:
+
+```bash
+NODE_BIN="/path/to/node" python3 scripts/test_examples.py
+```
+
+Or run individual example suites:
 
 ```bash
 cd examples/cloudflare-pages-function
 npm test
+
+cd ../cloudflare-worker
+npm test
+
+cd ../nextjs-route-handler
+npm test
+
+cd ../express-endpoint
+npm test
+
+cd ../static-html-plus-serverless
+npm test
 ```
 
-This covers invalid email handling, honeypot behavior, contact creation payloads, and duplicate-contact updates.
+These cover invalid email handling, honeypot behavior, CORS where applicable, contact creation payloads, and duplicate-contact updates.
 
 ## Local Marketplace Smoke Test
 

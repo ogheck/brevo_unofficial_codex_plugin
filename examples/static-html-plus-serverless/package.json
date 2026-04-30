@@ -1,0 +1,8 @@
+{
+  "name": "brevo-static-html-plus-serverless-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

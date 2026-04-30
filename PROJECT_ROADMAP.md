@@ -42,6 +42,14 @@ Done:
 - Added backend integration patterns doc.
 - Added first backend template: Cloudflare Pages Function lead-capture endpoint.
 - Added tests for the Cloudflare Pages Function template.
+- Added remaining backend templates for Cloudflare Workers, Next.js route handlers, Express, and static HTML plus serverless.
+- Added endpoint tests for all backend templates.
+- Added a repo-level example test runner.
+- Added local Markdown link checker.
+- Tightened bundled skill routing examples and output structures.
+- Added no-direct-send, token setup, drip workflow, and site integration docs.
+- Added example drip campaign brief output.
+- Added changelog.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Pushed initial commits to GitHub.
 
@@ -49,9 +57,8 @@ Not done:
 
 - Install and load-test the plugin from the Codex app UI and GitHub marketplace source.
 - Test Brevo MCP auth with a real `BREVO_MCP_TOKEN`.
-- Finish remaining backend integration templates.
 - Add example projects and fixtures.
-- Add changelog and versioning process.
+- Tag `v0.1.1` after install and MCP smoke tests pass.
 
 ## Phase 0: Charter And Safety Model
 
@@ -133,7 +140,7 @@ Acceptance criteria:
 
 ## Phase 3: Skill Workflow V1
 
-Status: in progress
+Status: mostly complete
 
 Goal: Make Codex reliably choose the right workflow for common Brevo work.
 
@@ -144,12 +151,15 @@ Current skills:
 - `brevo-campaign-qa`: campaign and template review for manual send.
 - `brevo-drip-builder`: drip campaign planning and message drafting.
 
-Tasks:
+Done:
 
 - Tighten skill descriptions so Codex routes correctly.
 - Add examples for common prompts.
 - Add a standard output format for each skill.
 - Add a "manual Brevo handoff" section to every workflow output.
+
+Remaining tasks:
+
 - Add guidance for when to use Brevo MCP versus local project files.
 
 Acceptance criteria:
@@ -161,16 +171,13 @@ Acceptance criteria:
 
 ## Phase 4: Backend Integration Templates
 
-Status: in progress
+Status: complete
 
 Goal: Provide reusable backend patterns for projects that need Brevo form/event submission.
 
 Added:
 
 - Cloudflare Pages Functions.
-
-Remaining templates to create:
-
 - Static HTML plus serverless endpoint.
 - Cloudflare Workers.
 - Vercel/Next.js route handler.
@@ -191,13 +198,11 @@ Core backend behavior:
 Added files:
 
 - `examples/cloudflare-pages-function/`
-- `docs/backend-patterns.md`
-
-Files to add:
-
+- `examples/static-html-plus-serverless/`
 - `examples/cloudflare-worker/`
 - `examples/nextjs-route-handler/`
 - `examples/express-endpoint/`
+- `docs/backend-patterns.md`
 
 Acceptance criteria:
 
@@ -208,7 +213,7 @@ Acceptance criteria:
 
 ## Phase 5: Drip Campaign Builder
 
-Status: planned
+Status: in progress
 
 Goal: Turn business goals into Brevo-ready lifecycle campaign plans.
 
@@ -223,6 +228,11 @@ Features:
 - Backend event requirements.
 - Brevo dashboard setup checklist.
 - QA checklist before manual activation.
+
+Added:
+
+- `docs/drip-campaign-workflow.md`
+- `examples/drip-campaign-brief/welcome-sequence.md`
 
 Drip campaign types:
 
@@ -310,12 +320,13 @@ Done:
 - Add "no direct send" review checklist.
 - Add release checklist.
 - Add endpoint tests for the Cloudflare Pages Function template.
+- Add endpoint tests for Cloudflare Worker, Next.js route handler, Express, and static HTML plus serverless templates.
+- Add a repo-level example test runner.
+- Add markdown link checker.
 - Add the local marketplace source with `codex plugin marketplace add`.
 
 Remaining tasks:
 
-- Add markdown lint or simple link check.
-- Add endpoint tests for future templates.
 - Install the plugin from the Codex app UI and verify bundled skills load.
 - Add the GitHub marketplace source after pushing the latest changes.
 
@@ -325,6 +336,12 @@ Added files:
 - `docs/testing.md`
 - `docs/release-checklist.md`
 - `examples/cloudflare-pages-function/test/brevo-lead.test.mjs`
+- `examples/cloudflare-worker/test/index.test.mjs`
+- `examples/nextjs-route-handler/test/route.test.mjs`
+- `examples/express-endpoint/test/brevoLead.test.mjs`
+- `examples/static-html-plus-serverless/test/brevo-lead.test.mjs`
+- `scripts/test_examples.py`
+- `scripts/check_markdown_links.py`
 
 Acceptance criteria:
 
@@ -342,16 +359,16 @@ Goal: Make the plugin understandable and installable by another Codex user.
 Done:
 
 - Add release checklist.
-
-Remaining tasks:
-
-- Expand README quickstart.
-- Add screenshots or terminal examples after local install works.
 - Add `docs/brevo-token-setup.md`.
 - Add `docs/no-direct-send-policy.md`.
 - Add `docs/drip-campaign-workflow.md`.
 - Add `docs/site-integration-workflow.md`.
 - Add changelog.
+
+Remaining tasks:
+
+- Expand README quickstart.
+- Add screenshots or terminal examples after local install works.
 - Tag releases.
 
 Acceptance criteria:
@@ -396,11 +413,11 @@ Must have:
 
 Should have:
 
-- Backend templates for common runtimes. First Cloudflare Pages Function template added; remaining runtimes planned.
+- Backend templates for common runtimes. Added Cloudflare Pages Functions, Cloudflare Workers, Next.js route handlers, Express, and static HTML plus serverless.
 - Validation script. Added `scripts/validate_plugin.py`.
 - Install smoke-test docs. Added `docs/testing.md`.
 - Project-specific integration notes.
-- Example drip campaign output.
+- Example drip campaign output. Added `examples/drip-campaign-brief/welcome-sequence.md`.
 
 Could have:
 
@@ -420,7 +437,6 @@ Won't have by default:
 ## Open Decisions
 
 - Which real project should be the first integration target?
-- Which backend runtime should be the next template after Cloudflare Pages Functions: Cloudflare Workers, Vercel/Next.js, or Express?
 - Should webhook management remain bundled by default or move to an advanced optional setup?
 - Should we create a direct `docs/` guide for Phresh Start once the first project is confirmed?
 - Do we need a private internal branch for higher-permission Brevo workflows, or should this repository stay strictly no-send?
@@ -430,7 +446,7 @@ Won't have by default:
 1. Done: Add validation script for plugin JSON and required files.
 2. In progress: Add marketplace source and install/load-test plugin from Codex.
 3. Set `BREVO_MCP_TOKEN` and verify read-only Brevo MCP tools.
-4. Done: Build the first backend integration template.
+4. Done: Build backend integration templates.
 5. Use the plugin on the first real project form.
-6. Add drip campaign example output.
+6. Done: Add drip campaign example output.
 7. In progress: Add release checklist and tag `v0.1.1`.
