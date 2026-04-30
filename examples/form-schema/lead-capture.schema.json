@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Brevo Lead Capture Form",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["email"],
+  "properties": {
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 254
+    },
+    "firstName": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "lastName": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "source": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "message": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "company": {
+      "type": "string",
+      "description": "Honeypot field. Real users should leave this blank.",
+      "maxLength": 120
+    }
+  }
+}

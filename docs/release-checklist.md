@@ -10,6 +10,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Confirm plugin manifest, marketplace JSON, and MCP config parse as valid JSON.
 - Confirm no Brevo API key or MCP token is committed.
 - Confirm `.mcp.json` does not include campaign send, schedule, SMS, or WhatsApp campaign servers.
+- Confirm `.mcp.json` does not include webhook management by default.
 
 ## Documentation Checks
 
@@ -39,6 +40,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 
 - Update `plugins/brevo-helper/.codex-plugin/plugin.json`.
 - Update `PROJECT_ROADMAP.md`.
+- Update `docs/release-status.md`.
 - Add or update `CHANGELOG.md`.
 - Commit changes with a focused release message.
 - Tag the release only after static checks and manual smoke tests pass.

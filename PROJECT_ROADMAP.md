@@ -50,6 +50,14 @@ Done:
 - Added no-direct-send, token setup, drip workflow, and site integration docs.
 - Added example drip campaign brief output.
 - Added changelog.
+- Moved webhook management out of the default MCP config.
+- Added MCP-versus-local-files guidance.
+- Added campaign QA workflow and example QA report.
+- Added project integration tracker and form schema fixture.
+- Added attribute mapping guide and example.
+- Added analytics review workflow and example.
+- Added release status doc with current blockers.
+- Expanded README quickstart and development checks.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Pushed initial commits to GitHub.
@@ -57,8 +65,7 @@ Done:
 Not done:
 
 - Install and load-test the plugin from the Codex app UI.
-- Test Brevo MCP auth with a real `BREVO_MCP_TOKEN`.
-- Add example projects and fixtures.
+- Set `BREVO_MCP_TOKEN` and test Brevo MCP auth.
 - Tag `v0.1.1` after install and MCP smoke tests pass.
 
 ## Phase 0: Charter And Safety Model
@@ -107,7 +114,7 @@ Acceptance criteria:
 
 ## Phase 2: Brevo MCP Read Integration
 
-Status: planned
+Status: in progress
 
 Goal: Confirm the plugin can inspect Brevo state without enabling direct send operations.
 
@@ -118,7 +125,6 @@ Bundled read-oriented MCP surfaces:
 - Templates.
 - Transactional templates.
 - Campaign analytics.
-- Webhooks.
 - Senders.
 - Domains.
 
@@ -129,7 +135,12 @@ Tasks:
 - Verify each bundled MCP endpoint initializes.
 - Verify useful read operations work for contacts, lists, templates, analytics, senders, and domains.
 - Document any endpoint that needs narrower tool allowlists.
-- Decide whether webhook management should remain bundled or move to optional setup because it can mutate production behavior.
+- Done: Move webhook management to optional documentation because it can mutate production behavior.
+
+Added:
+
+- `docs/mcp-vs-local-files.md`
+- `docs/optional-webhook-management.md`
 
 Acceptance criteria:
 
@@ -141,7 +152,7 @@ Acceptance criteria:
 
 ## Phase 3: Skill Workflow V1
 
-Status: mostly complete
+Status: complete
 
 Goal: Make Codex reliably choose the right workflow for common Brevo work.
 
@@ -158,9 +169,6 @@ Done:
 - Add examples for common prompts.
 - Add a standard output format for each skill.
 - Add a "manual Brevo handoff" section to every workflow output.
-
-Remaining tasks:
-
 - Add guidance for when to use Brevo MCP versus local project files.
 
 Acceptance criteria:
@@ -255,7 +263,7 @@ Acceptance criteria:
 
 ## Phase 6: Campaign And Template QA
 
-Status: planned
+Status: in progress
 
 Goal: Help the user catch marketing, compliance, and technical issues before using Brevo to send.
 
@@ -279,9 +287,14 @@ Acceptance criteria:
 - Campaign QA returns a manual "ready to test in Brevo" checklist.
 - Campaign QA does not send, schedule, or submit anything.
 
+Added:
+
+- `docs/campaign-qa-workflow.md`
+- `examples/campaign-qa-report/template-readiness.md`
+
 ## Phase 7: Project-Specific Website Integration
 
-Status: planned
+Status: in progress
 
 Goal: Use the plugin on a real project, starting with the first target site.
 
@@ -299,6 +312,11 @@ Tasks:
 - Add spam/rate-limit control.
 - Add local and staging verification steps.
 - Add project-specific notes to `docs/project-integrations.md`.
+
+Added:
+
+- `docs/project-integrations.md`
+- `examples/form-schema/lead-capture.schema.json`
 
 Acceptance criteria:
 
@@ -360,15 +378,21 @@ Goal: Make the plugin understandable and installable by another Codex user.
 Done:
 
 - Add release checklist.
+- Add release status doc.
+- Expand README quickstart.
 - Add `docs/brevo-token-setup.md`.
 - Add `docs/no-direct-send-policy.md`.
 - Add `docs/drip-campaign-workflow.md`.
+- Add `docs/campaign-qa-workflow.md`.
 - Add `docs/site-integration-workflow.md`.
 - Add changelog.
+- Add project integration tracker.
+- Add form schema fixture.
+- Add attribute mapping guide.
+- Add analytics review workflow.
 
 Remaining tasks:
 
-- Expand README quickstart.
 - Add screenshots or terminal examples after local install works.
 - Tag releases.
 
@@ -418,13 +442,14 @@ Should have:
 - Validation script. Added `scripts/validate_plugin.py`.
 - Install smoke-test docs. Added `docs/testing.md`.
 - Project-specific integration notes.
+- Form schema fixture. Added `examples/form-schema/lead-capture.schema.json`.
 - Example drip campaign output. Added `examples/drip-campaign-brief/welcome-sequence.md`.
 
 Could have:
 
-- Reusable form schema examples.
-- Attribute mapping examples.
-- Analytics review templates.
+- Reusable form schema examples. Added `examples/form-schema/lead-capture.schema.json`.
+- Attribute mapping examples. Added `examples/attribute-mapping/website-lead.md`.
+- Analytics review templates. Added `examples/analytics-review/campaign-summary.md`.
 - Screenshot-based docs after the plugin is installed.
 
 Won't have by default:
@@ -438,7 +463,6 @@ Won't have by default:
 ## Open Decisions
 
 - Which real project should be the first integration target?
-- Should webhook management remain bundled by default or move to an advanced optional setup?
 - Should we create a direct `docs/` guide for Phresh Start once the first project is confirmed?
 - Do we need a private internal branch for higher-permission Brevo workflows, or should this repository stay strictly no-send?
 

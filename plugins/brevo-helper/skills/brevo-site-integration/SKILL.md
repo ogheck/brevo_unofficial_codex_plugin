@@ -38,6 +38,14 @@ Prefer the repo examples when they fit the target project:
 - `examples/express-endpoint/`
 - `examples/static-html-plus-serverless/`
 
+Use `examples/form-schema/lead-capture.schema.json` as a starting point for public lead-capture payloads.
+
+Use `docs/attribute-mapping.md` when mapping local fields to Brevo contact attributes.
+
+## MCP Versus Local Files
+
+Use local files to locate form and backend code. Use Brevo MCP to confirm list IDs, attributes, templates, sender state, and domain state. If MCP is unavailable, use placeholder list names and tell the user which Brevo dashboard values must be confirmed manually.
+
 ## Prompt Examples
 
 Handle prompts like:

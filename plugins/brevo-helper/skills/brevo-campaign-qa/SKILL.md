@@ -54,6 +54,10 @@ Handle prompts like:
 - "Check whether this template is ready for Brevo."
 - "Look at my sender/domain setup before launch."
 
+Use Brevo MCP for sender, domain, template, list, and analytics context when available. Use local files for HTML templates, generated copy, route output, and tracked links when the campaign content lives in the project.
+
+Use `docs/analytics-review-workflow.md` when the user asks for performance analysis or recommendations from Brevo campaign analytics.
+
 ## No Direct Sending
 
 Do not send, schedule, launch, resend, or submit campaigns from Codex, even if the user asks casually. Keep the final send/schedule action in the Brevo dashboard.

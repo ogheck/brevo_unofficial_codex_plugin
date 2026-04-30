@@ -21,6 +21,7 @@ DENIED_MCP_URL_PARTS = (
     "brevo_sms_campaigns",
     "brevo_whatsapp_campaigns",
     "brevo_whatsapp_management",
+    "brevo_webhooks_management",
 )
 
 RAW_SECRET_PATTERNS = (

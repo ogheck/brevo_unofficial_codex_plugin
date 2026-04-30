@@ -30,12 +30,6 @@
       "bearer_token_env_var": "BREVO_MCP_TOKEN",
       "note": "Focused Brevo campaign analytics MCP server."
     },
-    "brevo_webhooks": {
-      "type": "http",
-      "url": "https://mcp.brevo.com/v1/brevo_webhooks_management/mcp",
-      "bearer_token_env_var": "BREVO_MCP_TOKEN",
-      "note": "Focused Brevo webhook management MCP server."
-    },
     "brevo_senders": {
       "type": "http",
       "url": "https://mcp.brevo.com/v1/brevo_senders/mcp",

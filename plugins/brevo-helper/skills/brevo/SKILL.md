@@ -15,6 +15,7 @@ This plugin is unofficial. Do not imply that it is made by, endorsed by, or supp
 - Expect Brevo auth to come from `BREVO_MCP_TOKEN`; never ask the user to paste a token into chat.
 - If tools are unavailable or auth fails, tell the user to generate a Brevo MCP token in Brevo and expose it to Codex as `BREVO_MCP_TOKEN`.
 - If MCP coverage is not enough, use Brevo's public API only with server-side secrets such as `BREVO_API_KEY`.
+- Webhook management is intentionally not bundled by default. Plan webhook needs and provide Brevo dashboard handoff steps unless the user explicitly installs an advanced webhook-management setup.
 
 ## Hard Boundary: No Direct Sending
 
@@ -31,7 +32,7 @@ The intended handoff is: Codex drafts the strategy, content, backend code, QA ch
 
 ## Safety Rules
 
-Start read-only. Inspect account state, lists, attributes, templates, sender status, analytics, and webhook configuration before making changes.
+Start read-only. Inspect account state, lists, attributes, templates, sender status, and analytics before making changes.
 
 Require explicit user confirmation before:
 
@@ -71,6 +72,14 @@ Use `brevo-campaign-qa` for prompts like:
 - "Check this template for missing variables."
 - "QA my sender/domain setup."
 
+## MCP Versus Local Files
+
+Use Brevo MCP for Brevo account objects: lists, attributes, templates, analytics, senders, and domains.
+
+Use local project files for application behavior: forms, submit handlers, API routes, serverless functions, environment variables, and tests.
+
+For website integrations, use both: local files determine where code changes belong, and Brevo MCP determines which Brevo objects the code should target.
+
 ## Common Outputs
 
 For audits, return:
@@ -84,7 +93,8 @@ For implementations, return:
 
 - Changed files.
 - Required environment variables.
-- Brevo list/template/webhook IDs used.
+- Brevo list/template IDs used.
+- Any webhook IDs or destinations that must be reviewed manually in Brevo.
 - Verification steps completed.
 - Manual Brevo dashboard handoff steps.
 

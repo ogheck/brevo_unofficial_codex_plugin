@@ -8,6 +8,10 @@
 - Added testing, backend patterns, release checklist, token setup, no-direct-send policy, drip workflow, and site integration docs.
 - Tightened Brevo skill routing examples and output structures.
 - Added an example welcome-sequence drip campaign brief.
+- Moved webhook management out of the default MCP configuration and documented optional handling.
+- Added campaign QA workflow, project integration tracker, and form schema fixture.
+- Added release status documentation for remaining app UI and live MCP auth smoke tests.
+- Added attribute mapping and analytics review workflow examples.
 
 ## 0.1.1
 

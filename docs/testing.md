@@ -117,5 +117,6 @@ Before release, confirm:
 
 - `.mcp.json` does not include `brevo_email_campaign_management`.
 - `.mcp.json` does not include SMS or WhatsApp campaign servers.
+- `.mcp.json` does not include `brevo_webhooks_management` by default.
 - Skill files say Codex must not send, schedule, submit, activate, or enroll contacts in live automations.
 - README tells users final send/schedule/activation happens in Brevo.

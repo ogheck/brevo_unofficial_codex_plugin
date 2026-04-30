@@ -6,13 +6,13 @@ This plugin is not made by, endorsed by, or supported by Brevo.
 
 ## What It Includes
 
-- Focused Brevo MCP server configuration for contacts, lists, templates, analytics, webhooks, senders, and domains.
+- Focused Brevo MCP server configuration for contacts, lists, templates, analytics, senders, and domains.
 - Codex skills for Brevo planning, website lead-capture integration, drip campaign building, and campaign QA.
 - A hard no-send boundary: Codex drafts, configures, reviews, and builds backend code; the user sends, schedules, submits, or activates inside Brevo.
 
 ## Install
 
-After this repository is pushed to GitHub:
+Add the GitHub-backed marketplace:
 
 ```bash
 codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin
@@ -27,6 +27,63 @@ codex plugin marketplace add "/Users/danielheck/Documents/New project"
 ```
 
 Restart Codex after installing or changing the plugin.
+
+## Quickstart
+
+1. Add the marketplace:
+
+   ```bash
+   codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin
+   ```
+
+2. Install "Brevo Helper" from the Codex plugin directory.
+
+3. Set Brevo MCP auth for Codex:
+
+   ```bash
+   export BREVO_MCP_TOKEN="your-token"
+   codex
+   ```
+
+   For the Codex desktop app on macOS:
+
+   ```bash
+   launchctl setenv BREVO_MCP_TOKEN "your-token"
+   ```
+
+4. Restart Codex after setting the token.
+
+5. Start with one of these prompts:
+
+   ```text
+   Use Brevo Helper to connect this form to Brevo safely.
+   ```
+
+   ```text
+   Build a Brevo drip campaign plan for this project.
+   ```
+
+   ```text
+   Review this Brevo campaign before I send it.
+   ```
+
+Codex should prepare code, copy, QA, and dashboard handoff steps. The user performs final send, schedule, activation, and enrollment actions inside Brevo.
+
+## Development Checks
+
+Run before committing:
+
+```bash
+python3 scripts/validate_plugin.py
+python3 scripts/check_markdown_links.py
+python3 scripts/test_examples.py
+```
+
+If your system `node` is unavailable, provide `NODE_BIN`:
+
+```bash
+NODE_BIN="/path/to/node" python3 scripts/test_examples.py
+```
 
 ## Brevo Authentication
 
@@ -104,10 +161,17 @@ The bundled skills prohibit direct sending from Codex. They require explicit con
 - `docs/no-direct-send-policy.md`
 - `docs/brevo-token-setup.md`
 - `docs/backend-patterns.md`
+- `docs/attribute-mapping.md`
 - `docs/drip-campaign-workflow.md`
+- `docs/campaign-qa-workflow.md`
+- `docs/analytics-review-workflow.md`
 - `docs/site-integration-workflow.md`
+- `docs/mcp-vs-local-files.md`
+- `docs/optional-webhook-management.md`
+- `docs/project-integrations.md`
 - `docs/testing.md`
 - `docs/release-checklist.md`
+- `docs/release-status.md`
 
 ## References
 
