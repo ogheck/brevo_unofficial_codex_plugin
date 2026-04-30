@@ -1,0 +1,20 @@
+{
+  "name": "brevo-unofficial",
+  "interface": {
+    "displayName": "Brevo Unofficial"
+  },
+  "plugins": [
+    {
+      "name": "brevo-helper",
+      "source": {
+        "source": "local",
+        "path": "./plugins/brevo-helper"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

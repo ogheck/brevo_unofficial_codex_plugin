@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Brevo Helper icon">
+  <rect width="64" height="64" rx="14" fill="#0B996E"/>
+  <path d="M15 20h23c6 0 10 3 10 8 0 3-2 6-5 7 4 1 7 4 7 9 0 6-5 10-12 10H15V20zm10 8v5h12c2 0 4-1 4-3s-2-2-4-2H25zm0 13v5h13c3 0 4-1 4-3s-2-2-4-2H25z" fill="#FFFFFF"/>
+  <path d="M14 11h36v6H14z" fill="#BFF4DE"/>
+</svg>

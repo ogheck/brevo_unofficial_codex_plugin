@@ -1,0 +1,58 @@
+{
+  "mcpServers": {
+    "brevo_contacts": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_contacts/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Unofficial plugin configuration for Brevo's contacts MCP server. Requires BREVO_MCP_TOKEN."
+    },
+    "brevo_lists": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_lists/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo list management MCP server."
+    },
+    "brevo_templates": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_templates/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo marketing template MCP server."
+    },
+    "brevo_transactional_templates": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_transac_templates/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo transactional email template MCP server."
+    },
+    "brevo_campaigns": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_email_campaign_management/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo email campaign management MCP server."
+    },
+    "brevo_campaign_analytics": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_campaign_analytics/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo campaign analytics MCP server."
+    },
+    "brevo_webhooks": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_webhooks_management/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo webhook management MCP server."
+    },
+    "brevo_senders": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_senders/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo sender identity MCP server."
+    },
+    "brevo_domains": {
+      "type": "http",
+      "url": "https://mcp.brevo.com/v1/brevo_domains/mcp",
+      "bearer_token_env_var": "BREVO_MCP_TOKEN",
+      "note": "Focused Brevo sender domain MCP server."
+    }
+  }
+}
