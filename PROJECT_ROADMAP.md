@@ -37,16 +37,21 @@ Done:
 - Added read-oriented plugin metadata.
 - Added skills for Brevo operations, site integration, campaign QA, and drip building.
 - Added README, license, icon, gitignore, and marketplace metadata.
+- Added static plugin validation script.
+- Added testing and release checklist docs.
+- Added backend integration patterns doc.
+- Added first backend template: Cloudflare Pages Function lead-capture endpoint.
+- Added tests for the Cloudflare Pages Function template.
+- Added the local repo as a Codex marketplace source for smoke testing.
 - Pushed initial commits to GitHub.
 
 Not done:
 
-- Install and load-test the plugin from GitHub in Codex.
+- Install and load-test the plugin from the Codex app UI and GitHub marketplace source.
 - Test Brevo MCP auth with a real `BREVO_MCP_TOKEN`.
-- Build backend integration templates.
+- Finish remaining backend integration templates.
 - Add example projects and fixtures.
-- Add validation scripts.
-- Add release checklist and versioning process.
+- Add changelog and versioning process.
 
 ## Phase 0: Charter And Safety Model
 
@@ -156,14 +161,17 @@ Acceptance criteria:
 
 ## Phase 4: Backend Integration Templates
 
-Status: planned
+Status: in progress
 
 Goal: Provide reusable backend patterns for projects that need Brevo form/event submission.
 
-Templates to create:
+Added:
+
+- Cloudflare Pages Functions.
+
+Remaining templates to create:
 
 - Static HTML plus serverless endpoint.
-- Cloudflare Pages Functions.
 - Cloudflare Workers.
 - Vercel/Next.js route handler.
 - Express/Node endpoint.
@@ -180,13 +188,16 @@ Core backend behavior:
 - Return safe public error messages.
 - Log enough for debugging without leaking secrets or personal data.
 
-Files to add:
+Added files:
 
 - `examples/cloudflare-pages-function/`
+- `docs/backend-patterns.md`
+
+Files to add:
+
 - `examples/cloudflare-worker/`
 - `examples/nextjs-route-handler/`
 - `examples/express-endpoint/`
-- `docs/backend-patterns.md`
 
 Acceptance criteria:
 
@@ -287,24 +298,33 @@ Acceptance criteria:
 
 ## Phase 8: Verification And Test Harness
 
-Status: planned
+Status: in progress
 
 Goal: Make plugin behavior and examples testable.
 
-Tasks:
+Done:
 
 - Add JSON validation script for plugin and marketplace files.
-- Add markdown lint or simple link check.
-- Add example endpoint tests where templates include code.
 - Add install smoke-test checklist.
 - Add MCP auth smoke-test checklist.
 - Add "no direct send" review checklist.
+- Add release checklist.
+- Add endpoint tests for the Cloudflare Pages Function template.
+- Add the local marketplace source with `codex plugin marketplace add`.
 
-Potential files:
+Remaining tasks:
+
+- Add markdown lint or simple link check.
+- Add endpoint tests for future templates.
+- Install the plugin from the Codex app UI and verify bundled skills load.
+- Add the GitHub marketplace source after pushing the latest changes.
+
+Added files:
 
 - `scripts/validate_plugin.py`
 - `docs/testing.md`
 - `docs/release-checklist.md`
+- `examples/cloudflare-pages-function/test/brevo-lead.test.mjs`
 
 Acceptance criteria:
 
@@ -315,11 +335,15 @@ Acceptance criteria:
 
 ## Phase 9: Documentation And Distribution
 
-Status: planned
+Status: in progress
 
 Goal: Make the plugin understandable and installable by another Codex user.
 
-Tasks:
+Done:
+
+- Add release checklist.
+
+Remaining tasks:
 
 - Expand README quickstart.
 - Add screenshots or terminal examples after local install works.
@@ -372,9 +396,9 @@ Must have:
 
 Should have:
 
-- Backend templates for common runtimes.
-- Validation script.
-- Install smoke-test docs.
+- Backend templates for common runtimes. First Cloudflare Pages Function template added; remaining runtimes planned.
+- Validation script. Added `scripts/validate_plugin.py`.
+- Install smoke-test docs. Added `docs/testing.md`.
 - Project-specific integration notes.
 - Example drip campaign output.
 
@@ -396,17 +420,17 @@ Won't have by default:
 ## Open Decisions
 
 - Which real project should be the first integration target?
-- Which backend runtime should be the first template: Cloudflare Pages Functions, Cloudflare Workers, Vercel/Next.js, or Express?
+- Which backend runtime should be the next template after Cloudflare Pages Functions: Cloudflare Workers, Vercel/Next.js, or Express?
 - Should webhook management remain bundled by default or move to an advanced optional setup?
 - Should we create a direct `docs/` guide for Phresh Start once the first project is confirmed?
 - Do we need a private internal branch for higher-permission Brevo workflows, or should this repository stay strictly no-send?
 
 ## Near-Term Build Order
 
-1. Add validation script for plugin JSON and required files.
-2. Install plugin locally from the GitHub marketplace.
+1. Done: Add validation script for plugin JSON and required files.
+2. In progress: Add marketplace source and install/load-test plugin from Codex.
 3. Set `BREVO_MCP_TOKEN` and verify read-only Brevo MCP tools.
-4. Build the first backend integration template.
+4. Done: Build the first backend integration template.
 5. Use the plugin on the first real project form.
 6. Add drip campaign example output.
-7. Add release checklist and tag `v0.1.1`.
+7. In progress: Add release checklist and tag `v0.1.1`.
