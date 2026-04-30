@@ -1,7 +1,7 @@
 {
   "name": "brevo-helper",
-  "version": "0.1.0",
-  "description": "Unofficial Codex plugin for working with Brevo through Brevo MCP and website integration workflows.",
+  "version": "0.1.1",
+  "description": "Unofficial Codex plugin for planning Brevo campaigns and building website/backend integrations without sending from Codex.",
   "author": {
     "name": "Daniel Heck",
     "url": "https://github.com/ogheck"
@@ -22,19 +22,18 @@
   "interface": {
     "displayName": "Brevo Helper",
     "shortDescription": "Unofficial Brevo workflows for Codex",
-    "longDescription": "Use Codex with Brevo contacts, lists, templates, campaigns, analytics, webhooks, and website lead-capture integrations through Brevo's MCP server. This plugin is unofficial and is not made by or endorsed by Brevo.",
+    "longDescription": "Use Codex to plan Brevo drip campaigns, draft marketing messages, QA campaign assets, and build website/backend lead-capture integrations. This plugin is designed for Brevo dashboard handoff and does not send, schedule, or launch messages from Codex. It is unofficial and is not made by or endorsed by Brevo.",
     "developerName": "Daniel Heck",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
-      "Read",
-      "Write"
+      "Read"
     ],
     "websiteURL": "https://github.com/ogheck/brevo_unofficial_codex_plugin",
     "defaultPrompt": [
       "Connect this form to Brevo safely.",
-      "Audit my Brevo lead capture flow.",
-      "Review this Brevo campaign before sending."
+      "Build a Brevo drip campaign plan.",
+      "Draft Brevo-ready marketing messages."
     ],
     "brandColor": "#0B996E",
     "composerIcon": "./assets/brevo-helper-small.svg"

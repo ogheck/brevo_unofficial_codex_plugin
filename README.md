@@ -1,14 +1,14 @@
 # Brevo Helper for Codex
 
-Unofficial Codex plugin for working with Brevo through Brevo MCP and website integration workflows.
+Unofficial Codex plugin for planning Brevo campaigns and building website/backend integrations without sending from Codex.
 
 This plugin is not made by, endorsed by, or supported by Brevo.
 
 ## What It Includes
 
-- Focused Brevo MCP server configuration for contacts, lists, templates, campaigns, analytics, webhooks, senders, and domains.
-- Codex skills for safe Brevo operations, website lead-capture integration, and campaign QA.
-- Read-first safety rules for campaign sends, bulk imports, deletes, and production configuration changes.
+- Focused Brevo MCP server configuration for contacts, lists, templates, analytics, webhooks, senders, and domains.
+- Codex skills for Brevo planning, website lead-capture integration, drip campaign building, and campaign QA.
+- A hard no-send boundary: Codex drafts, configures, reviews, and builds backend code; the user sends, schedules, submits, or activates inside Brevo.
 
 ## Install
 
@@ -60,15 +60,36 @@ For websites or apps that call Brevo directly, use a separate server-side runtim
 
 Keep Brevo API keys out of frontend JavaScript, static HTML, public environment variables, and `NEXT_PUBLIC_` variables.
 
+## No Direct Sending From Codex
+
+This plugin is intentionally not a Brevo send operator.
+
+Codex should not:
+
+- Send email, SMS, or WhatsApp messages.
+- Schedule or launch campaigns.
+- Submit campaigns for delivery.
+- Activate live drip automations.
+- Enroll contacts in live automations.
+
+Codex should:
+
+- Build backend lead-capture endpoints.
+- Draft marketing messages and drip sequences.
+- Prepare Brevo dashboard setup instructions.
+- QA campaign assets and tracking.
+- Tell the user exactly what to click or confirm inside Brevo.
+
 ## Starter Prompts
 
 - "Use Brevo Helper to connect this newsletter form to Brevo."
 - "Audit this lead capture flow and confirm it writes to the right Brevo list."
-- "Review this Brevo campaign draft before I send it."
+- "Build a Brevo drip campaign plan for this project."
+- "Draft the Brevo messages and dashboard setup checklist."
 
 ## Safety Defaults
 
-The bundled skills require explicit confirmation before sending messages, launching campaigns, bulk importing or deleting contacts, or changing sender/domain/webhook configuration.
+The bundled skills prohibit direct sending from Codex. They require explicit confirmation before bulk importing or deleting contacts, or changing sender/domain/webhook configuration.
 
 ## References
 

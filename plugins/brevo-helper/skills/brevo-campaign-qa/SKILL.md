@@ -1,15 +1,15 @@
 ---
 name: brevo-campaign-qa
-description: Review, prepare, debug, or QA Brevo campaigns, templates, transactional emails, sender setup, domain setup, webhooks, and analytics before sending.
+description: Review, prepare, debug, or QA Brevo campaign plans, templates, transactional email copy, sender setup, domain setup, webhooks, and analytics for manual Brevo dashboard sending.
 ---
 
 # Brevo Campaign QA
 
-Use this skill for Brevo email campaign and template work.
+Use this skill for Brevo email campaign and template work. Codex prepares and reviews assets; the user sends or schedules inside Brevo.
 
 ## Read First
 
-Before editing or sending anything, inspect:
+Before editing or preparing send-ready assets, inspect:
 
 - Campaign draft status, subject, sender, recipients, schedule, and included lists or segments.
 - Template variables and required attributes.
@@ -32,17 +32,17 @@ Check for:
 - UTM and attribution consistency.
 - Mobile-readable layout and plain-text fallback where available.
 
-## Write Safety
+## No Direct Sending
 
-Do not send, schedule, or launch campaigns without explicit user confirmation.
+Do not send, schedule, launch, resend, or submit campaigns from Codex, even if the user asks casually. Keep the final send/schedule action in the Brevo dashboard.
 
-For send-like actions, state:
+For send-ready handoff, state:
 
 - Campaign name or ID.
 - Audience/list/segment.
 - Sender.
 - Subject.
 - Estimated recipient count if available.
-- Exact action requested.
+- Exact manual action the user should perform inside Brevo.
 
-Wait for the user to approve before executing the send or schedule operation.
+Stop after the handoff checklist.

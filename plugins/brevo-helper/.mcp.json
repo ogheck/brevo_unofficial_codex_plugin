@@ -24,12 +24,6 @@
       "bearer_token_env_var": "BREVO_MCP_TOKEN",
       "note": "Focused Brevo transactional email template MCP server."
     },
-    "brevo_campaigns": {
-      "type": "http",
-      "url": "https://mcp.brevo.com/v1/brevo_email_campaign_management/mcp",
-      "bearer_token_env_var": "BREVO_MCP_TOKEN",
-      "note": "Focused Brevo email campaign management MCP server."
-    },
     "brevo_campaign_analytics": {
       "type": "http",
       "url": "https://mcp.brevo.com/v1/brevo_campaign_analytics/mcp",
