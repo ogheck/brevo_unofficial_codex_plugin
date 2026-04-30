@@ -51,11 +51,12 @@ Done:
 - Added example drip campaign brief output.
 - Added changelog.
 - Added the local repo as a Codex marketplace source for smoke testing.
+- Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Pushed initial commits to GitHub.
 
 Not done:
 
-- Install and load-test the plugin from the Codex app UI and GitHub marketplace source.
+- Install and load-test the plugin from the Codex app UI.
 - Test Brevo MCP auth with a real `BREVO_MCP_TOKEN`.
 - Add example projects and fixtures.
 - Tag `v0.1.1` after install and MCP smoke tests pass.
@@ -324,11 +325,11 @@ Done:
 - Add a repo-level example test runner.
 - Add markdown link checker.
 - Add the local marketplace source with `codex plugin marketplace add`.
+- Add the GitHub marketplace source with `codex plugin marketplace add`.
 
 Remaining tasks:
 
 - Install the plugin from the Codex app UI and verify bundled skills load.
-- Add the GitHub marketplace source after pushing the latest changes.
 
 Added files:
 
