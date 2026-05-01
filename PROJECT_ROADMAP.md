@@ -60,6 +60,7 @@ Done:
 - Expanded README quickstart and development checks.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
+- Refreshed the GitHub marketplace cache with the latest pushed revision.
 - Pushed initial commits to GitHub.
 
 Not done:
@@ -344,6 +345,7 @@ Done:
 - Add markdown link checker.
 - Add the local marketplace source with `codex plugin marketplace add`.
 - Add the GitHub marketplace source with `codex plugin marketplace add`.
+- Refresh the GitHub marketplace cache with `codex plugin marketplace upgrade`.
 
 Remaining tasks:
 

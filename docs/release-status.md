@@ -11,6 +11,7 @@ Status: not ready to tag.
 - All backend example tests pass with `python3 scripts/test_examples.py`.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
 - GitHub marketplace source was added with `codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin`.
+- GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial`.
 - Default MCP config excludes campaign management, SMS campaigns, WhatsApp campaigns, and webhook management.
 
 ## Blocked
