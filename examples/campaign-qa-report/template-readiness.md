@@ -4,22 +4,22 @@ This is an example output shape for campaign review. It is not a sent or schedul
 
 ## Readiness Verdict
 
-Status: not ready to send.
+Status: blocked.
 
-Reason: CTA URL, personalization fallback, and sender/domain checks need confirmation before the user sends from Brevo.
+Reason: One P0 blocker and two P1 issues need confirmation before the user sends from Brevo.
 
 ## Blocking Issues
 
-- CTA URL is still a placeholder.
-- `FIRSTNAME` personalization needs a fallback value.
-- Sender/domain authentication status is not confirmed.
+- P0 Blocker: CTA URL is still a placeholder.
+- P1 Fix Before Send: `FIRSTNAME` personalization needs a fallback value.
+- P1 Fix Before Send: Sender/domain authentication status is not confirmed.
 
 ## Recommended Improvements
 
-- Align the subject and preheader so they promise the same outcome.
-- Shorten the first paragraph for mobile scanning.
-- Add one primary CTA and remove duplicate competing links.
-- Add UTM parameters to the CTA URL.
+- P1 Fix Before Send: Align the subject and preheader so they promise the same outcome.
+- P2 Improve: Shorten the first paragraph for mobile scanning.
+- P2 Improve: Add one primary CTA and remove duplicate competing links.
+- P1 Fix Before Send: Add UTM parameters to the CTA URL.
 
 ## Brevo Setup Checks
 

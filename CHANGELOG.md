@@ -17,6 +17,7 @@
 - Confirmed the initial GitHub Actions validation run passed.
 - Added backend integration stub generator with tests.
 - Added bundled drip campaign playbooks and a quote follow-up campaign example.
+- Added campaign QA readiness scorecard guidance.
 
 ## 0.1.1
 

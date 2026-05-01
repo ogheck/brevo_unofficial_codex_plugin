@@ -4,6 +4,8 @@ Use this workflow before the user sends, schedules, submits, or launches a Brevo
 
 Codex reviews and prepares. The user performs the final live action inside Brevo.
 
+Use the [campaign QA scorecard](campaign-qa-scorecard.md) to assign priorities and readiness verdicts.
+
 ## Inputs
 
 Gather or infer:
@@ -46,6 +48,12 @@ Review:
 - Mobile readability.
 - Plain-text fallback.
 - UTM and attribution consistency.
+
+## Finding Priorities
+
+- P0 Blocker: must be fixed before Brevo test send or launch.
+- P1 Fix Before Send: should be fixed before a real send.
+- P2 Improve: useful quality improvement that should not block internal testing.
 
 ## Manual Brevo Handoff
 

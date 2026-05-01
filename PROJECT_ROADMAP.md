@@ -63,6 +63,7 @@ Done:
 - Confirmed the initial GitHub Actions validation run passed.
 - Added backend integration stub generator and tests.
 - Added bundled drip campaign playbooks and a quote follow-up campaign example.
+- Added campaign QA readiness scorecard guidance.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -272,7 +273,7 @@ Acceptance criteria:
 
 ## Phase 6: Campaign And Template QA
 
-Status: in progress
+Status: complete
 
 Goal: Help the user catch marketing, compliance, and technical issues before using Brevo to send.
 
@@ -299,7 +300,9 @@ Acceptance criteria:
 Added:
 
 - `docs/campaign-qa-workflow.md`
+- `docs/campaign-qa-scorecard.md`
 - `examples/campaign-qa-report/template-readiness.md`
+- `plugins/brevo-helper/skills/brevo-campaign-qa/references/readiness-scorecard.md`
 
 ## Phase 7: Project-Specific Website Integration
 

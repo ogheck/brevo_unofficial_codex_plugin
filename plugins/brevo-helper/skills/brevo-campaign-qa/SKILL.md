@@ -7,6 +7,8 @@ description: Review, prepare, debug, or QA Brevo campaign plans, templates, tran
 
 Use this skill for Brevo email campaign and template work. Codex prepares and reviews assets; the user sends or schedules inside Brevo.
 
+Use `references/readiness-scorecard.md` when available to grade findings and decide whether the campaign is blocked, needs changes, or is ready for a Brevo dashboard test send.
+
 ## Read First
 
 Before editing or preparing send-ready assets, inspect:
@@ -32,6 +34,22 @@ Check for:
 - UTM and attribution consistency.
 - Mobile-readable layout and plain-text fallback where available.
 
+## Severity Model
+
+Use this priority model:
+
+| Priority | Meaning | Examples |
+| --- | --- | --- |
+| P0 Blocker | Must be fixed before Brevo test send or launch | Missing unsubscribe footer, broken primary CTA, unverified sender/domain, wrong audience |
+| P1 Fix Before Send | Should be fixed before broad send, but may be tested internally | Missing fallback, weak suppression, subject/preheader mismatch, missing UTM |
+| P2 Improve | Useful polish that should not block internal testing | Copy clarity, mobile scannability, secondary CTA cleanup |
+
+Readiness verdicts:
+
+- `Blocked`: any P0 issue exists.
+- `Needs changes`: no P0 issues, but one or more P1 issues exist.
+- `Ready for Brevo test`: no P0 or P1 issues found; user should still test manually in Brevo.
+
 ## Output Structure
 
 Use this standard section order:
@@ -44,6 +62,8 @@ Use this standard section order:
 6. Manual Brevo Handoff.
 
 If no blocking issues are found, say that clearly and still include the test-send checklist for the Brevo dashboard.
+
+For each finding, include priority, affected asset, evidence, recommended fix, and whether Brevo or local project files need to change.
 
 ## Prompt Examples
 
