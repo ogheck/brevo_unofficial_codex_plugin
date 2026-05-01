@@ -93,6 +93,12 @@ Use strict live mode only after `BREVO_MCP_TOKEN` is set and the Codex app smoke
 python3 scripts/release_preflight.py --strict-live
 ```
 
+After installing Brevo Helper in the Codex app, verify local app install state with:
+
+```bash
+python3 scripts/check_codex_plugin_state.py
+```
+
 Run the Brevo MCP initialize smoke test directly with:
 
 ```bash

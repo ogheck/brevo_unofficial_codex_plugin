@@ -9,6 +9,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Run `python3 scripts/test_integration_generator.py`.
 - Run `python3 scripts/test_examples.py`.
 - Run `python3 scripts/release_preflight.py`.
+- Run `python3 scripts/check_codex_plugin_state.py` after installing the plugin in Codex.
 - After `BREVO_MCP_TOKEN` is set, run `python3 scripts/smoke_brevo_mcp.py`.
 - Confirm the preflight reports a clean git worktree.
 - Confirm GitHub Actions validation passes on the pushed commit.
@@ -30,6 +31,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 
 - Install the plugin from the local marketplace path.
 - Install the plugin from `ogheck/brevo_unofficial_codex_plugin` after pushing.
+- Confirm `python3 scripts/check_codex_plugin_state.py` passes.
 - Restart Codex and confirm the bundled skills load.
 - Set `BREVO_MCP_TOKEN` in the Codex runtime environment and verify read-oriented MCP tools initialize.
 - Run `python3 scripts/release_preflight.py --strict-live`.

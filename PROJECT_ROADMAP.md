@@ -68,15 +68,17 @@ Done:
 - Added CLI smoke-test examples for marketplace refresh and release preflight.
 - Added copy style profiles for Brevo drip campaign drafting.
 - Added Brevo MCP initialize smoke-test script for live read-endpoint checks.
+- Added Codex app marketplace/plugin install-state diagnostic.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
+- Confirmed strict live release preflight passes with the current Brevo MCP token environment.
 - Pushed initial commits to GitHub.
 
 Not done:
 
 - Install and load-test the plugin from the Codex app UI.
-- Set `BREVO_MCP_TOKEN` and test Brevo MCP auth.
+- Confirm `brevo-helper@brevo-unofficial` is enabled in Codex app config after UI install.
 - Tag `v0.1.1` after install and MCP smoke tests pass.
 
 ## Phase 0: Charter And Safety Model

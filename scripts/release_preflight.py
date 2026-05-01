@@ -79,6 +79,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Run Brevo Helper release preflight checks.")
     parser.add_argument("--strict-live", action="store_true", help="Fail if live Brevo/Codex app checks are still blocked.")
     parser.add_argument("--skip-marketplace", action="store_true", help="Skip local Codex marketplace cache revision check.")
+    parser.add_argument("--check-codex-app", action="store_true", help="Also check local Codex app marketplace/plugin install state.")
     args = parser.parse_args()
 
     env = os.environ.copy()
@@ -107,6 +108,12 @@ def main() -> int:
     version = manifest_version()
     print(f"==> version")
     print(f"ok: plugin manifest version is {version}")
+
+    print("==> Codex app plugin state")
+    if args.check_codex_app:
+        checks.append(run_check("Codex app plugin install state", [sys.executable, "scripts/check_codex_plugin_state.py"]))
+    else:
+        print("skipped: run python3 scripts/check_codex_plugin_state.py before tagging")
 
     blockers = live_blockers()
     if blockers:

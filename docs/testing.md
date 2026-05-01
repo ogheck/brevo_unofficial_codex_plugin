@@ -77,6 +77,12 @@ python3 scripts/release_preflight.py
 
 This runs plugin validation, Markdown link validation, all backend example tests, checks whether the git worktree is clean, and checks whether the local GitHub marketplace cache matches the current repo revision.
 
+To include the local Codex app marketplace/plugin install-state diagnostic:
+
+```bash
+python3 scripts/release_preflight.py --check-codex-app
+```
+
 On CI runners that do not have a local Codex marketplace cache, use:
 
 ```bash
@@ -124,6 +130,19 @@ Expected result:
 - The plugin appears as "Brevo Helper".
 - The plugin shows read-oriented capabilities.
 - The bundled skills are available in new Codex threads.
+
+After installing, run:
+
+```bash
+python3 scripts/check_codex_plugin_state.py
+```
+
+Expected result:
+
+- The `brevo-unofficial` marketplace is registered.
+- The marketplace cache revision matches this checkout.
+- The `brevo-helper@brevo-unofficial` plugin is enabled in Codex config.
+- An installed Brevo Helper plugin copy exists under the Codex plugin cache.
 
 See [CLI smoke test examples](cli-smoke-test-examples.md) for verified marketplace refresh and preflight output.
 
