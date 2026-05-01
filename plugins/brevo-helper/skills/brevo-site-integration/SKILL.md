@@ -7,6 +7,8 @@ description: Connect websites, landing pages, forms, lead capture, newsletters, 
 
 Use this skill when connecting a site or app to Brevo, especially forms that create contacts, add contacts to lists, trigger transactional email, or fire webhooks/events.
 
+Use `references/integration-intake.md` when available to capture the target project path, runtime, forms, Brevo objects, environment variables, security risks, and verification plan before editing a real project.
+
 ## First Pass
 
 Inspect the project before changing code:
@@ -41,6 +43,16 @@ Prefer the repo examples when they fit the target project:
 Use `examples/form-schema/lead-capture.schema.json` as a starting point for public lead-capture payloads.
 
 Use `docs/attribute-mapping.md` when mapping local fields to Brevo contact attributes.
+
+Runtime selection defaults:
+
+| Target project signal | Preferred starter |
+| --- | --- |
+| Next.js App Router with `app/api` | `nextjs-route-handler` |
+| Express or standalone Node server | `express-endpoint` |
+| Cloudflare Pages with `functions/` | `cloudflare-pages-function` |
+| Cloudflare Worker project | `cloudflare-worker` |
+| Static site that can call a serverless API | `static-html-plus-serverless` |
 
 ## MCP Versus Local Files
 

@@ -64,6 +64,7 @@ Done:
 - Added backend integration stub generator and tests.
 - Added bundled drip campaign playbooks and a quote follow-up campaign example.
 - Added campaign QA readiness scorecard guidance.
+- Added site integration intake guidance for first real-project wiring.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -306,7 +307,7 @@ Added:
 
 ## Phase 7: Project-Specific Website Integration
 
-Status: in progress
+Status: in progress, blocked on first target project path
 
 Goal: Use the plugin on a real project, starting with the first target site.
 
@@ -328,7 +329,9 @@ Tasks:
 Added:
 
 - `docs/project-integrations.md`
+- `docs/project-integration-intake.md`
 - `examples/form-schema/lead-capture.schema.json`
+- `plugins/brevo-helper/skills/brevo-site-integration/references/integration-intake.md`
 
 Acceptance criteria:
 

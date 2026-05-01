@@ -2,6 +2,8 @@
 
 Use this file to track real projects connected to Brevo with this plugin.
 
+Use [project integration intake](project-integration-intake.md) before editing a real target project.
+
 ## Integration Template
 
 Project:
@@ -45,3 +47,8 @@ Template starter:
 ```bash
 python3 scripts/create_integration_stub.py --runtime nextjs-route-handler --target ./brevo-lead-capture
 ```
+
+Prepared intake:
+
+- `docs/project-integration-intake.md`
+- `plugins/brevo-helper/skills/brevo-site-integration/references/integration-intake.md`

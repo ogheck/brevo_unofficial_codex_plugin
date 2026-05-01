@@ -2,6 +2,8 @@
 
 Use this workflow when Codex is connecting a website, landing page, app form, newsletter signup, or lead capture flow to Brevo.
 
+Use the [project integration intake](project-integration-intake.md) before editing a real project.
+
 ## Discovery
 
 Inspect the project first:

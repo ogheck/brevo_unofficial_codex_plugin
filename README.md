@@ -200,6 +200,7 @@ The bundled skills prohibit direct sending from Codex. They require explicit con
 - `docs/campaign-qa-scorecard.md`
 - `docs/analytics-review-workflow.md`
 - `docs/site-integration-workflow.md`
+- `docs/project-integration-intake.md`
 - `docs/mcp-vs-local-files.md`
 - `docs/optional-webhook-management.md`
 - `docs/project-integrations.md`

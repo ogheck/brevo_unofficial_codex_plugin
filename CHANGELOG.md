@@ -18,6 +18,7 @@
 - Added backend integration stub generator with tests.
 - Added bundled drip campaign playbooks and a quote follow-up campaign example.
 - Added campaign QA readiness scorecard guidance.
+- Added site integration intake guidance for first real-project wiring.
 
 ## 0.1.1
 
