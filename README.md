@@ -195,6 +195,7 @@ The bundled skills prohibit direct sending from Codex. They require explicit con
 - `docs/backend-patterns.md`
 - `docs/attribute-mapping.md`
 - `docs/drip-campaign-workflow.md`
+- `docs/drip-campaign-playbooks.md`
 - `docs/campaign-qa-workflow.md`
 - `docs/analytics-review-workflow.md`
 - `docs/site-integration-workflow.md`

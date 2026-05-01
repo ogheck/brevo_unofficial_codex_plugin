@@ -62,6 +62,7 @@ Done:
 - Added GitHub Actions validation workflow.
 - Confirmed the initial GitHub Actions validation run passed.
 - Added backend integration stub generator and tests.
+- Added bundled drip campaign playbooks and a quote follow-up campaign example.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -227,7 +228,7 @@ Acceptance criteria:
 
 ## Phase 5: Drip Campaign Builder
 
-Status: in progress
+Status: complete
 
 Goal: Turn business goals into Brevo-ready lifecycle campaign plans.
 
@@ -246,7 +247,10 @@ Features:
 Added:
 
 - `docs/drip-campaign-workflow.md`
+- `docs/drip-campaign-playbooks.md`
 - `examples/drip-campaign-brief/welcome-sequence.md`
+- `examples/drip-campaign-brief/quote-follow-up.md`
+- `plugins/brevo-helper/skills/brevo-drip-builder/references/drip-playbooks.md`
 
 Drip campaign types:
 
@@ -457,6 +461,7 @@ Should have:
 - Project-specific integration notes.
 - Form schema fixture. Added `examples/form-schema/lead-capture.schema.json`.
 - Example drip campaign output. Added `examples/drip-campaign-brief/welcome-sequence.md`.
+- Reusable drip campaign playbooks. Added `docs/drip-campaign-playbooks.md`.
 
 Could have:
 
@@ -486,5 +491,5 @@ Won't have by default:
 3. Set `BREVO_MCP_TOKEN` and verify read-only Brevo MCP tools.
 4. Done: Build backend integration templates.
 5. Use the plugin on the first real project form.
-6. Done: Add drip campaign example output.
+6. Done: Add drip campaign example output and reusable campaign playbooks.
 7. In progress: Add release checklist and tag `v0.1.1`.

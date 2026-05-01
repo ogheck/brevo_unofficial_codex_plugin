@@ -18,10 +18,13 @@ Gather or infer:
 - Offer or conversion goal.
 - Brand voice and constraints.
 - Number of messages and timing.
+- Campaign type: welcome, lead nurture, quote follow-up, abandoned inquiry, post-purchase, review request, winback, or re-engagement.
 - Contact attributes needed for personalization.
 - Brevo list, segment, or form context if available.
 - Unsubscribe/compliance needs.
 - Backend events or webhooks needed to support the flow.
+
+If the user does not specify a campaign type, choose the closest fit from the entry trigger and goal. Use `references/drip-playbooks.md` when available for timing, assets, suppression rules, and backend event defaults.
 
 ## Output Structure
 
@@ -55,6 +58,21 @@ Handle prompts like:
 - "Build a Brevo nurture campaign for free estimate requests."
 - "Draft winback emails for inactive customers."
 - "Map the backend events and contact attributes needed for this drip."
+
+## Campaign Type Defaults
+
+Use these defaults as a starting point, then adapt to the user's business and consent model:
+
+| Type | Default trigger | Typical sequence | Main exit or suppression |
+| --- | --- | --- | --- |
+| Welcome | Consented lead joins a list | 3 to 5 emails over 1 to 10 days | Converted, unsubscribed, or moved to customer list |
+| Lead nurture | Lead shows interest in a category | 4 to 6 emails over 2 to 4 weeks | Booked, purchased, stale, or excluded segment |
+| Quote follow-up | Quote requested or sent | 3 to 4 emails over 1 to 10 days | Quote accepted, declined, expired, or replied |
+| Abandoned inquiry | Consented lead starts but does not complete an inquiry | 1 to 2 emails within 72 hours | Inquiry completed or no consent/lawful basis |
+| Post-purchase | Purchase or service completion | 3 to 4 emails over 1 to 30 days | Refund, support escalation, or repeat purchase |
+| Review request | Fulfillment complete and customer is eligible | 1 to 2 emails over 3 to 10 days | Review submitted or open support issue |
+| Winback | Customer inactive after expected interval | 2 to 3 emails over 2 to 4 weeks | Purchase, opt-out, or suppressed segment |
+| Re-engagement | Subscriber inactive for engagement window | 2 to 3 emails over 1 to 3 weeks | Clicked, unsubscribed, or sunset from list |
 
 ## Backend Guidance
 

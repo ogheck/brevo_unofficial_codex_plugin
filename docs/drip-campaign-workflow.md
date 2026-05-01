@@ -4,6 +4,8 @@ Use this workflow when Codex is planning a Brevo welcome sequence, lead nurture,
 
 Codex prepares the campaign. The user builds, tests, and activates it manually inside Brevo.
 
+Use [drip campaign playbooks](drip-campaign-playbooks.md) for campaign-type defaults when the user has not supplied timing, attributes, stop conditions, or backend event names.
+
 ## Intake
 
 Gather or infer:

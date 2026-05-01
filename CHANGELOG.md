@@ -16,6 +16,7 @@
 - Added GitHub Actions workflow for plugin validation and example tests.
 - Confirmed the initial GitHub Actions validation run passed.
 - Added backend integration stub generator with tests.
+- Added bundled drip campaign playbooks and a quote follow-up campaign example.
 
 ## 0.1.1
 
