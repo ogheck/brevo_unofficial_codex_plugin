@@ -67,11 +67,28 @@ python3 scripts/release_preflight.py
 
 This runs plugin validation, Markdown link validation, all backend example tests, checks whether the git worktree is clean, and checks whether the local GitHub marketplace cache matches the current repo revision.
 
+On CI runners that do not have a local Codex marketplace cache, use:
+
+```bash
+python3 scripts/release_preflight.py --skip-marketplace
+```
+
 After `BREVO_MCP_TOKEN` is set and live smoke testing is ready, run:
 
 ```bash
 python3 scripts/release_preflight.py --strict-live
 ```
+
+## GitHub Actions
+
+The repository includes `.github/workflows/validate.yml`.
+
+It runs:
+
+- Plugin package validation.
+- Markdown link validation.
+- Backend example tests.
+- Release preflight with the marketplace cache check skipped.
 
 ## Local Marketplace Smoke Test
 

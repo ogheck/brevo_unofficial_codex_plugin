@@ -1,0 +1,38 @@
+name: Validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    name: Plugin Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate plugin package
+        run: python3 scripts/validate_plugin.py
+
+      - name: Check Markdown links
+        run: python3 scripts/check_markdown_links.py
+
+      - name: Test backend examples
+        run: python3 scripts/test_examples.py
+
+      - name: Run release preflight without local marketplace cache
+        run: python3 scripts/release_preflight.py --skip-marketplace

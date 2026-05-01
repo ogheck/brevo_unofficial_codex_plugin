@@ -78,6 +78,7 @@ def live_blockers() -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run Brevo Helper release preflight checks.")
     parser.add_argument("--strict-live", action="store_true", help="Fail if live Brevo/Codex app checks are still blocked.")
+    parser.add_argument("--skip-marketplace", action="store_true", help="Skip local Codex marketplace cache revision check.")
     args = parser.parse_args()
 
     env = os.environ.copy()
@@ -94,10 +95,13 @@ def main() -> int:
     print(("ok: " if worktree_ok else "blocked: ") + worktree_message)
     checks.append(worktree_ok)
 
-    marketplace_ok, marketplace_message = marketplace_revision_status()
     print("==> marketplace cache")
-    print(("ok: " if marketplace_ok else "blocked: ") + marketplace_message)
-    checks.append(marketplace_ok)
+    if args.skip_marketplace:
+        print("skipped: local Codex marketplace cache check")
+    else:
+        marketplace_ok, marketplace_message = marketplace_revision_status()
+        print(("ok: " if marketplace_ok else "blocked: ") + marketplace_message)
+        checks.append(marketplace_ok)
 
     version = manifest_version()
     print(f"==> version")

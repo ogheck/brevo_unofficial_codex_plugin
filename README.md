@@ -92,6 +92,12 @@ Use strict live mode only after `BREVO_MCP_TOKEN` is set and the Codex app smoke
 python3 scripts/release_preflight.py --strict-live
 ```
 
+For CI runners without a local Codex marketplace cache:
+
+```bash
+python3 scripts/release_preflight.py --skip-marketplace
+```
+
 ## Brevo Authentication
 
 Generate a Brevo MCP token from your Brevo account:

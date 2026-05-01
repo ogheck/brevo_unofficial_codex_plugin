@@ -13,6 +13,7 @@
 - Added release status documentation for remaining app UI and live MCP auth smoke tests.
 - Added attribute mapping and analytics review workflow examples.
 - Added release preflight script for static release checks and live blocker reporting.
+- Added GitHub Actions workflow for plugin validation and example tests.
 
 ## 0.1.1
 

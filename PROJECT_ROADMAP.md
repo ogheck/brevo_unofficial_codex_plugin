@@ -59,6 +59,7 @@ Done:
 - Added release status doc with current blockers.
 - Expanded README quickstart and development checks.
 - Added release preflight script.
+- Added GitHub Actions validation workflow.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -348,6 +349,7 @@ Done:
 - Add the GitHub marketplace source with `codex plugin marketplace add`.
 - Refresh the GitHub marketplace cache with `codex plugin marketplace upgrade`.
 - Add release preflight script.
+- Add GitHub Actions validation workflow.
 
 Remaining tasks:
 
@@ -366,6 +368,7 @@ Added files:
 - `scripts/test_examples.py`
 - `scripts/check_markdown_links.py`
 - `scripts/release_preflight.py`
+- `.github/workflows/validate.yml`
 
 Acceptance criteria:
 

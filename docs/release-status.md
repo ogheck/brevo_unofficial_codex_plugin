@@ -10,6 +10,7 @@ Status: not ready to tag.
 - Markdown link checks pass with `python3 scripts/check_markdown_links.py`.
 - All backend example tests pass with `python3 scripts/test_examples.py`.
 - Release preflight passes in non-strict mode with `python3 scripts/release_preflight.py`.
+- CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
 - GitHub marketplace source was added with `codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin`.
 - GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial` and should match the latest pushed revision before tagging.
