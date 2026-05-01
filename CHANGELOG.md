@@ -23,6 +23,8 @@
 - Added copy style profiles for Brevo drip campaign drafting.
 - Added Brevo MCP initialize smoke-test script for live read-endpoint checks.
 - Added Codex app plugin install-state diagnostic for release smoke testing.
+- Added install-time Brevo onboarding skill, docs, and verifier script.
+- Switched marketplace authentication policy to `ON_INSTALL`.
 
 ## 0.1.1
 

@@ -35,7 +35,7 @@ Done:
 - Added focused Brevo MCP config using `BREVO_MCP_TOKEN`.
 - Removed the campaign-management MCP endpoint from the default package.
 - Added read-oriented plugin metadata.
-- Added skills for Brevo operations, site integration, campaign QA, and drip building.
+- Added skills for Brevo operations, onboarding, site integration, campaign QA, and drip building.
 - Added README, license, icon, gitignore, and marketplace metadata.
 - Added static plugin validation script.
 - Added testing and release checklist docs.
@@ -69,6 +69,8 @@ Done:
 - Added copy style profiles for Brevo drip campaign drafting.
 - Added Brevo MCP initialize smoke-test script for live read-endpoint checks.
 - Added Codex app marketplace/plugin install-state diagnostic.
+- Added guided install-time onboarding docs and verifier script.
+- Switched marketplace authentication policy to install-time setup.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -172,6 +174,7 @@ Goal: Make Codex reliably choose the right workflow for common Brevo work.
 Current skills:
 
 - `brevo`: umbrella workflow and safety boundary.
+- `brevo-onboarding`: install-time setup, credential guidance, and smoke testing.
 - `brevo-site-integration`: website/backend lead capture.
 - `brevo-campaign-qa`: campaign and template review for manual send.
 - `brevo-drip-builder`: drip campaign planning and message drafting.
@@ -179,6 +182,7 @@ Current skills:
 Done:
 
 - Tighten skill descriptions so Codex routes correctly.
+- Add onboarding routing for setup, token, API key, sender/domain, and IP checks.
 - Add examples for common prompts.
 - Add a standard output format for each skill.
 - Add a "manual Brevo handoff" section to every workflow output.
@@ -187,6 +191,7 @@ Done:
 Acceptance criteria:
 
 - "Build a Brevo drip campaign" triggers drip-builder behavior.
+- "Set up Brevo Helper authentication" triggers onboarding behavior.
 - "Connect this form to Brevo" triggers site integration behavior.
 - "Review this campaign before I send" triggers campaign QA behavior without sending.
 - Every workflow ends with manual dashboard steps when Brevo action is required.
@@ -410,6 +415,7 @@ Done:
 - Add release checklist.
 - Add release status doc.
 - Expand README quickstart.
+- Add `docs/onboarding.md`.
 - Add `docs/brevo-token-setup.md`.
 - Add `docs/no-direct-send-policy.md`.
 - Add `docs/drip-campaign-workflow.md`.

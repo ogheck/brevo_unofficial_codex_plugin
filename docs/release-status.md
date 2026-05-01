@@ -17,6 +17,8 @@ Status: not ready to tag.
 - Codex app plugin state diagnostic passes with `python3 scripts/check_codex_plugin_state.py`.
 - Codex config shows `brevo-helper@brevo-unofficial` enabled.
 - Installed plugin cache exists at the expected Brevo Helper version.
+- Marketplace auth policy now uses install-time authentication setup.
+- Guided onboarding verifier is available with `python3 scripts/brevo_onboarding_check.py`.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - GitHub Actions validation workflow ran successfully after being added.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
@@ -35,10 +37,11 @@ Status: not ready to tag.
 1. Set `BREVO_MCP_TOKEN` in the Codex runtime environment.
 2. Restart Codex.
 3. Open a fresh Codex app thread after installing Brevo Helper.
-4. Verify bundled skills load in the fresh thread.
-5. Verify read-oriented Brevo MCP tools initialize.
-6. Confirm Codex can inspect lists, templates, senders, domains, and analytics.
-7. Confirm there is no direct send, schedule, launch, activation, or enrollment path.
-8. Confirm the latest GitHub Actions validation run passed.
-9. Move release notes from `Unreleased` into the tagged version section in `CHANGELOG.md`.
-10. Tag `v0.1.1`.
+4. Verify the new `brevo-onboarding` skill loads in the fresh thread.
+5. Run `python3 scripts/brevo_onboarding_check.py`.
+6. Verify read-oriented Brevo MCP tools initialize.
+7. Confirm Codex can inspect lists, templates, senders, domains, and analytics.
+8. Confirm there is no direct send, schedule, launch, activation, or enrollment path.
+9. Confirm the latest GitHub Actions validation run passed.
+10. Move release notes from `Unreleased` into the tagged version section in `CHANGELOG.md`.
+11. Tag `v0.1.1`.

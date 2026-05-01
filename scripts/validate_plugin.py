@@ -108,7 +108,7 @@ def validate_marketplace(errors: list[str]) -> None:
     require((ROOT / source.get("path", "")[2:]).exists(), "Marketplace plugin path does not exist.", errors)
     policy = entry.get("policy", {})
     require(policy.get("installation") == "AVAILABLE", "Marketplace installation policy must be AVAILABLE.", errors)
-    require(policy.get("authentication") == "ON_USE", "Marketplace auth policy must be ON_USE.", errors)
+    require(policy.get("authentication") == "ON_INSTALL", "Marketplace auth policy must be ON_INSTALL.", errors)
     require(entry.get("category") == "Productivity", "Marketplace category must be Productivity.", errors)
 
 
@@ -130,7 +130,7 @@ def validate_skills(errors: list[str]) -> None:
     skills_root = PLUGIN_ROOT / "skills"
     require(skills_root.exists(), "Plugin skills directory is missing.", errors)
     skill_files = sorted(skills_root.glob("*/SKILL.md"))
-    require(len(skill_files) >= 4, "Expected at least four bundled skills.", errors)
+    require(len(skill_files) >= 5, "Expected at least five bundled skills.", errors)
 
     for skill_file in skill_files:
         text = skill_file.read_text(encoding="utf-8")
@@ -142,6 +142,13 @@ def validate_skills(errors: list[str]) -> None:
         text = umbrella.read_text(encoding="utf-8").lower()
         require("do not send" in text, "Umbrella Brevo skill must include no-send rule.", errors)
         require("dashboard" in text and "handoff" in text, "Umbrella Brevo skill must mention dashboard handoff.", errors)
+
+    onboarding = skills_root / "brevo-onboarding" / "SKILL.md"
+    require(onboarding.exists(), "Brevo onboarding skill is missing.", errors)
+    if onboarding.exists():
+        text = onboarding.read_text(encoding="utf-8").lower()
+        require("brevo_mcp_token" in text, "Brevo onboarding skill must mention BREVO_MCP_TOKEN.", errors)
+        require("do not ask the user to paste" in text, "Brevo onboarding skill must prohibit pasted secrets.", errors)
 
 
 def validate_text_scan(errors: list[str]) -> None:

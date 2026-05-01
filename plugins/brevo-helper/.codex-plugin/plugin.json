@@ -22,7 +22,7 @@
   "interface": {
     "displayName": "Brevo Helper",
     "shortDescription": "Unofficial Brevo workflows for Codex",
-    "longDescription": "Use Codex to plan Brevo drip campaigns, draft marketing messages, QA campaign assets, and build website/backend lead-capture integrations. This plugin is designed for Brevo dashboard handoff and does not send, schedule, or launch messages from Codex. It is unofficial and is not made by or endorsed by Brevo.",
+    "longDescription": "Use Codex to set up Brevo Helper authentication, plan Brevo drip campaigns, draft marketing messages, QA campaign assets, and build website/backend lead-capture integrations. This plugin is designed for Brevo dashboard handoff and does not send, schedule, or launch messages from Codex. It is unofficial and is not made by or endorsed by Brevo.",
     "developerName": "Daniel Heck",
     "category": "Productivity",
     "capabilities": [
@@ -31,9 +31,9 @@
     ],
     "websiteURL": "https://github.com/ogheck/brevo_unofficial_codex_plugin",
     "defaultPrompt": [
+      "Set up Brevo Helper authentication.",
       "Connect this form to Brevo safely.",
-      "Build a Brevo drip campaign plan.",
-      "Draft Brevo-ready marketing messages."
+      "Build a Brevo drip campaign plan."
     ],
     "brandColor": "#0B996E",
     "composerIcon": "./assets/brevo-helper-small.svg"

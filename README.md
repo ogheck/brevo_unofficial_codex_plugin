@@ -7,7 +7,7 @@ This plugin is not made by, endorsed by, or supported by Brevo.
 ## What It Includes
 
 - Focused Brevo MCP server configuration for contacts, lists, templates, analytics, senders, and domains.
-- Codex skills for Brevo planning, website lead-capture integration, drip campaign building, and campaign QA.
+- Codex skills for Brevo onboarding, planning, website lead-capture integration, drip campaign building, and campaign QA.
 - A hard no-send boundary: Codex drafts, configures, reviews, and builds backend code; the user sends, schedules, submits, or activates inside Brevo.
 
 ## Install
@@ -19,6 +19,8 @@ codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin
 ```
 
 Then open the Codex plugin directory, choose the "Brevo Unofficial" marketplace, and install "Brevo Helper".
+
+The marketplace uses install-time authentication policy, so complete the Brevo setup checklist during install. See [Brevo Helper Onboarding](docs/onboarding.md).
 
 For local development from this checkout:
 
@@ -38,7 +40,13 @@ Restart Codex after installing or changing the plugin.
 
 2. Install "Brevo Helper" from the Codex plugin directory.
 
-3. Set Brevo MCP auth for Codex:
+3. Ask Codex for guided setup:
+
+   ```text
+   Set up Brevo Helper authentication.
+   ```
+
+4. Set Brevo MCP auth for Codex:
 
    ```bash
    export BREVO_MCP_TOKEN="your-token"
@@ -51,9 +59,15 @@ Restart Codex after installing or changing the plugin.
    launchctl setenv BREVO_MCP_TOKEN "your-token"
    ```
 
-4. Restart Codex after setting the token.
+5. Restart Codex after setting the token.
 
-5. Start with one of these prompts:
+6. Run the local onboarding verifier:
+
+   ```bash
+   python3 scripts/brevo_onboarding_check.py
+   ```
+
+7. Start with one of these prompts:
 
    ```text
    Use Brevo Helper to connect this form to Brevo safely.
@@ -97,6 +111,12 @@ After installing Brevo Helper in the Codex app, verify local app install state w
 
 ```bash
 python3 scripts/check_codex_plugin_state.py
+```
+
+Run the guided onboarding check with:
+
+```bash
+python3 scripts/brevo_onboarding_check.py
 ```
 
 Run the Brevo MCP initialize smoke test directly with:
@@ -155,6 +175,8 @@ Then fully restart the Codex app.
 
 Do not commit Brevo tokens or API keys to this repository.
 
+For guided install-time setup and verification, see [Brevo Helper Onboarding](docs/onboarding.md).
+
 ## Runtime App Secrets
 
 For websites or apps that call Brevo directly, use a separate server-side runtime secret such as `BREVO_API_KEY`.
@@ -192,6 +214,7 @@ Codex should:
 ## Starter Prompts
 
 - "Use Brevo Helper to connect this newsletter form to Brevo."
+- "Set up Brevo Helper authentication."
 - "Audit this lead capture flow and confirm it writes to the right Brevo list."
 - "Build a Brevo drip campaign plan for this project."
 - "Draft the Brevo messages and dashboard setup checklist."
@@ -203,6 +226,7 @@ The bundled skills prohibit direct sending from Codex. They require explicit con
 ## Project Docs
 
 - `docs/no-direct-send-policy.md`
+- `docs/onboarding.md`
 - `docs/brevo-token-setup.md`
 - `docs/backend-patterns.md`
 - `docs/attribute-mapping.md`

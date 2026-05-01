@@ -9,6 +9,8 @@ Use this skill when the user wants Codex to work with Brevo or connect a project
 
 This plugin is unofficial. Do not imply that it is made by, endorsed by, or supported by Brevo.
 
+Use `brevo-onboarding` when the task is installation, authentication, setup verification, MCP token setup, API key setup, sender/domain authentication review, IP setup review, or first-run smoke testing.
+
 ## Access Model
 
 - Prefer the bundled Brevo MCP servers before writing custom API calls.
@@ -59,6 +61,12 @@ Use `brevo-site-integration` for prompts like:
 - "Connect this contact form to Brevo."
 - "Add newsletter signups to my Brevo list."
 - "Build the backend for Brevo lead capture."
+
+Use `brevo-onboarding` for prompts like:
+
+- "Set up Brevo Helper authentication."
+- "Verify my Brevo MCP token works."
+- "Help me link Brevo API and IP settings."
 
 Use `brevo-drip-builder` for prompts like:
 

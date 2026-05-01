@@ -2,6 +2,8 @@
 
 Brevo Helper uses two separate kinds of credentials.
 
+For the full install-time setup flow, see [Brevo Helper Onboarding](onboarding.md).
+
 ## Codex MCP Token
 
 Use `BREVO_MCP_TOKEN` only for Codex MCP access.
@@ -24,6 +26,12 @@ launchctl setenv BREVO_MCP_TOKEN "your-token"
 ```
 
 Restart the Codex app after setting the variable.
+
+After setup, run:
+
+```bash
+python3 scripts/brevo_onboarding_check.py
+```
 
 ## Application API Key
 

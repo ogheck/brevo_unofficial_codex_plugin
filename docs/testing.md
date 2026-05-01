@@ -22,6 +22,14 @@ The plugin validator checks:
 
 The markdown link checker verifies local Markdown links point at files inside this repository.
 
+For install-time setup verification, run:
+
+```bash
+python3 scripts/brevo_onboarding_check.py --skip-mcp-smoke
+```
+
+Run it without `--skip-mcp-smoke` after `BREVO_MCP_TOKEN` is set.
+
 ## Integration Generator Tests
 
 Run:
@@ -103,6 +111,12 @@ python3 scripts/smoke_brevo_mcp.py
 
 This checks each bundled read-oriented MCP endpoint and does not print the token.
 
+For the guided install-time setup check, run:
+
+```bash
+python3 scripts/brevo_onboarding_check.py
+```
+
 ## GitHub Actions
 
 The repository includes `.github/workflows/validate.yml`.
@@ -128,6 +142,7 @@ Restart Codex, open the plugin directory, choose the "Brevo Unofficial" marketpl
 Expected result:
 
 - The plugin appears as "Brevo Helper".
+- The plugin prompts for install-time authentication setup.
 - The plugin shows read-oriented capabilities.
 - The bundled skills are available in new Codex threads.
 
@@ -189,6 +204,14 @@ For a command-line initialize check:
 ```bash
 python3 scripts/smoke_brevo_mcp.py
 ```
+
+For a broader onboarding check:
+
+```bash
+python3 scripts/brevo_onboarding_check.py
+```
+
+Add `--require-api-key` when the target app integration needs server-side `BREVO_API_KEY`.
 
 ## No-Direct-Send Review
 
