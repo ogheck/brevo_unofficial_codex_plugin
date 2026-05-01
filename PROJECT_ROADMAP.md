@@ -73,12 +73,12 @@ Done:
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
 - Confirmed strict live release preflight passes with the current Brevo MCP token environment.
+- Confirmed Codex app install-state diagnostic passes after installing Brevo Helper.
 - Pushed initial commits to GitHub.
 
 Not done:
 
-- Install and load-test the plugin from the Codex app UI.
-- Confirm `brevo-helper@brevo-unofficial` is enabled in Codex app config after UI install.
+- Confirm bundled Brevo Helper skills and MCP tools are visible inside a fresh Codex app thread.
 - Tag `v0.1.1` after install and MCP smoke tests pass.
 
 ## Phase 0: Charter And Safety Model

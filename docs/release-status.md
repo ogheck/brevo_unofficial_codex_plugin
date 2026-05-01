@@ -12,8 +12,11 @@ Status: not ready to tag.
 - All backend example tests pass with `python3 scripts/test_examples.py`.
 - Release preflight passes in non-strict mode with `python3 scripts/release_preflight.py`.
 - Strict release preflight passes with `python3 scripts/release_preflight.py --strict-live`.
+- Strict release preflight including the app install-state diagnostic passes with `python3 scripts/release_preflight.py --strict-live --check-codex-app`.
 - Brevo MCP initialize smoke test passed for contacts, lists, templates, transactional templates, campaign analytics, senders, and domains.
-- Codex app plugin state diagnostic is available with `python3 scripts/check_codex_plugin_state.py`.
+- Codex app plugin state diagnostic passes with `python3 scripts/check_codex_plugin_state.py`.
+- Codex config shows `brevo-helper@brevo-unofficial` enabled.
+- Installed plugin cache exists at the expected Brevo Helper version.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - GitHub Actions validation workflow ran successfully after being added.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
@@ -25,21 +28,17 @@ Status: not ready to tag.
 
 ## Blocked
 
-- Codex app UI install/load test has not been completed.
-- Current Codex config does not yet show `brevo-helper@brevo-unofficial` as an enabled plugin.
-- Codex app UI read-tool smoke test still needs to confirm the bundled MCP tools load inside a normal Codex app thread.
+- Fresh Codex app thread smoke test still needs to confirm bundled Brevo Helper skills and read-oriented MCP tools are visible to the model.
 
 ## Before Tagging
 
 1. Set `BREVO_MCP_TOKEN` in the Codex runtime environment.
 2. Restart Codex.
-3. Install Brevo Helper from the Codex app plugin UI.
-4. Run `python3 scripts/check_codex_plugin_state.py`.
-5. Verify bundled skills load in a new thread.
-6. Verify read-oriented Brevo MCP tools initialize.
-7. Confirm Codex can inspect lists, templates, senders, domains, and analytics.
-8. Confirm there is no direct send, schedule, launch, activation, or enrollment path.
-9. Run `python3 scripts/release_preflight.py --strict-live --check-codex-app`.
-10. Confirm the latest GitHub Actions validation run passed.
-11. Move release notes from `Unreleased` into the tagged version section in `CHANGELOG.md`.
-12. Tag `v0.1.1`.
+3. Open a fresh Codex app thread after installing Brevo Helper.
+4. Verify bundled skills load in the fresh thread.
+5. Verify read-oriented Brevo MCP tools initialize.
+6. Confirm Codex can inspect lists, templates, senders, domains, and analytics.
+7. Confirm there is no direct send, schedule, launch, activation, or enrollment path.
+8. Confirm the latest GitHub Actions validation run passed.
+9. Move release notes from `Unreleased` into the tagged version section in `CHANGELOG.md`.
+10. Tag `v0.1.1`.
