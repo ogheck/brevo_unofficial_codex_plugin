@@ -12,7 +12,7 @@ Status: not ready to tag.
 - Release preflight passes in non-strict mode with `python3 scripts/release_preflight.py`.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
 - GitHub marketplace source was added with `codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin`.
-- GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial`.
+- GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial` and matches repo revision `4caa9e3`.
 - Default MCP config excludes campaign management, SMS campaigns, WhatsApp campaigns, and webhook management.
 
 ## Blocked
