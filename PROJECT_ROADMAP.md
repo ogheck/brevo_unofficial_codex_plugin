@@ -65,6 +65,7 @@ Done:
 - Added bundled drip campaign playbooks and a quote follow-up campaign example.
 - Added campaign QA readiness scorecard guidance.
 - Added site integration intake guidance for first real-project wiring.
+- Added CLI smoke-test examples for marketplace refresh and release preflight.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -413,10 +414,11 @@ Done:
 - Add form schema fixture.
 - Add attribute mapping guide.
 - Add analytics review workflow.
+- Add CLI smoke-test examples for marketplace refresh and release preflight.
 
 Remaining tasks:
 
-- Add screenshots or terminal examples after local install works.
+- Add screenshots after local app install works.
 - Tag releases.
 
 Acceptance criteria:

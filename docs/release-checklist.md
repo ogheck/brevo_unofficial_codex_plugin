@@ -21,6 +21,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 
 - Confirm README install instructions match the current marketplace source.
 - Confirm `docs/testing.md` covers local and GitHub marketplace smoke tests.
+- Confirm `docs/cli-smoke-test-examples.md` reflects the latest pushed commit before tagging.
 - Confirm backend examples document required environment variables.
 - Confirm docs state this plugin is unofficial and final send/activation work happens in Brevo.
 

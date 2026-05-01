@@ -203,6 +203,7 @@ The bundled skills prohibit direct sending from Codex. They require explicit con
 - `docs/project-integration-intake.md`
 - `docs/mcp-vs-local-files.md`
 - `docs/optional-webhook-management.md`
+- `docs/cli-smoke-test-examples.md`
 - `docs/project-integrations.md`
 - `docs/testing.md`
 - `docs/release-checklist.md`

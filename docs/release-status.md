@@ -15,7 +15,9 @@ Status: not ready to tag.
 - GitHub Actions validation workflow ran successfully after being added.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
 - GitHub marketplace source was added with `codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin`.
-- GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial` and should match the latest pushed revision before tagging.
+- GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial`; rerun before tagging so it matches the exact tagged commit.
+- CLI smoke-test examples were added in `docs/cli-smoke-test-examples.md`.
+- GitHub Actions validation has passed on the pushed `main` branch; confirm the latest run matches the exact tagged commit before tagging.
 - Default MCP config excludes campaign management, SMS campaigns, WhatsApp campaigns, and webhook management.
 
 ## Blocked

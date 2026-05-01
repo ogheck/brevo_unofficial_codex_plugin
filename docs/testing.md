@@ -117,6 +117,8 @@ Expected result:
 - The plugin shows read-oriented capabilities.
 - The bundled skills are available in new Codex threads.
 
+See [CLI smoke test examples](cli-smoke-test-examples.md) for verified marketplace refresh and preflight output.
+
 ## GitHub Marketplace Smoke Test
 
 After pushing to GitHub:
