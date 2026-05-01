@@ -89,6 +89,14 @@ After `BREVO_MCP_TOKEN` is set and live smoke testing is ready, run:
 python3 scripts/release_preflight.py --strict-live
 ```
 
+Strict live mode also runs the bundled Brevo MCP initialize smoke test:
+
+```bash
+python3 scripts/smoke_brevo_mcp.py
+```
+
+This checks each bundled read-oriented MCP endpoint and does not print the token.
+
 ## GitHub Actions
 
 The repository includes `.github/workflows/validate.yml`.
@@ -156,6 +164,12 @@ Expected result:
 - Brevo contact/list/template/sender/domain read tools initialize.
 - Codex can inspect Brevo setup when asked.
 - Codex does not expose a default send/schedule/launch path.
+
+For a command-line initialize check:
+
+```bash
+python3 scripts/smoke_brevo_mcp.py
+```
 
 ## No-Direct-Send Review
 

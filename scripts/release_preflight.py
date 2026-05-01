@@ -118,6 +118,8 @@ def main() -> int:
     else:
         print("==> live blockers")
         print("ok: BREVO_MCP_TOKEN is set. Run Codex app and Brevo MCP smoke tests before tagging.")
+        if args.strict_live:
+            checks.append(run_check("Brevo MCP initialize smoke test", [sys.executable, "scripts/smoke_brevo_mcp.py"]))
 
     if not all(checks):
         print("Release preflight failed.")

@@ -11,6 +11,8 @@ Status: not ready to tag.
 - Integration generator tests pass with `python3 scripts/test_integration_generator.py`.
 - All backend example tests pass with `python3 scripts/test_examples.py`.
 - Release preflight passes in non-strict mode with `python3 scripts/release_preflight.py`.
+- Strict release preflight now checks `BREVO_MCP_TOKEN` and runs `scripts/smoke_brevo_mcp.py`.
+- Brevo MCP initialize smoke test passed for contacts, lists, templates, transactional templates, campaign analytics, senders, and domains.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - GitHub Actions validation workflow ran successfully after being added.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
@@ -23,7 +25,7 @@ Status: not ready to tag.
 ## Blocked
 
 - Codex app UI install/load test has not been completed.
-- Brevo MCP auth smoke test has not been completed because `BREVO_MCP_TOKEN` is not set in the current environment.
+- Codex app UI read-tool smoke test still needs to confirm the bundled MCP tools load inside a normal Codex app thread.
 
 ## Before Tagging
 

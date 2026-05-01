@@ -21,6 +21,7 @@
 - Added site integration intake guidance for first real-project wiring.
 - Added CLI smoke-test examples for marketplace refresh and release preflight.
 - Added copy style profiles for Brevo drip campaign drafting.
+- Added Brevo MCP initialize smoke-test script for live read-endpoint checks.
 
 ## 0.1.1
 

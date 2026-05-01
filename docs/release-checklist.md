@@ -9,6 +9,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Run `python3 scripts/test_integration_generator.py`.
 - Run `python3 scripts/test_examples.py`.
 - Run `python3 scripts/release_preflight.py`.
+- After `BREVO_MCP_TOKEN` is set, run `python3 scripts/smoke_brevo_mcp.py`.
 - Confirm the preflight reports a clean git worktree.
 - Confirm GitHub Actions validation passes on the pushed commit.
 - Confirm the GitHub Actions run is for the commit being tagged.

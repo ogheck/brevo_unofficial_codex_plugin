@@ -67,6 +67,7 @@ Done:
 - Added site integration intake guidance for first real-project wiring.
 - Added CLI smoke-test examples for marketplace refresh and release preflight.
 - Added copy style profiles for Brevo drip campaign drafting.
+- Added Brevo MCP initialize smoke-test script for live read-endpoint checks.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -365,6 +366,7 @@ Done:
 - Add release preflight script.
 - Add GitHub Actions validation workflow.
 - Add backend integration stub generator tests.
+- Add Brevo MCP initialize smoke-test script for live read endpoints.
 
 Remaining tasks:
 
@@ -385,6 +387,7 @@ Added files:
 - `scripts/test_integration_generator.py`
 - `scripts/check_markdown_links.py`
 - `scripts/release_preflight.py`
+- `scripts/smoke_brevo_mcp.py`
 - `.github/workflows/validate.yml`
 
 Acceptance criteria:
