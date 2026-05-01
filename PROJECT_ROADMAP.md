@@ -66,6 +66,7 @@ Done:
 - Added campaign QA readiness scorecard guidance.
 - Added site integration intake guidance for first real-project wiring.
 - Added CLI smoke-test examples for marketplace refresh and release preflight.
+- Added copy style profiles for Brevo drip campaign drafting.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -436,7 +437,7 @@ Possible features:
 
 - CLI helper that generates backend endpoint stubs from selected runtime. Added `scripts/create_integration_stub.py`.
 - Attribute mapping assistant that compares local form fields to Brevo contact attributes.
-- Drip copy style profiles for different projects.
+- Drip copy style profiles for different projects. Added `docs/copy-style-profiles.md`.
 - Campaign brief generator from website content.
 - Analytics summary workflow that reads Brevo campaign analytics and recommends copy/segment improvements.
 - Webhook event debugging guide for project-specific backends.
@@ -476,6 +477,7 @@ Could have:
 - Reusable form schema examples. Added `examples/form-schema/lead-capture.schema.json`.
 - Attribute mapping examples. Added `examples/attribute-mapping/website-lead.md`.
 - Analytics review templates. Added `examples/analytics-review/campaign-summary.md`.
+- Copy style profile examples. Added `examples/copy-style-profiles/warm-professional.md`.
 - Screenshot-based docs after the plugin is installed.
 
 Won't have by default:

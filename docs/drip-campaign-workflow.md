@@ -6,6 +6,8 @@ Codex prepares the campaign. The user builds, tests, and activates it manually i
 
 Use [drip campaign playbooks](drip-campaign-playbooks.md) for campaign-type defaults when the user has not supplied timing, attributes, stop conditions, or backend event names.
 
+Use [copy style profiles](copy-style-profiles.md) when the user has not supplied detailed brand voice guidance.
+
 ## Intake
 
 Gather or infer:
@@ -16,6 +18,7 @@ Gather or infer:
 - Conversion goal.
 - Offer.
 - Voice and compliance constraints.
+- Copy style profile.
 - Number of messages.
 - Timing.
 - Required contact attributes.

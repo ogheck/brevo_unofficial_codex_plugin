@@ -17,6 +17,7 @@ Gather or infer:
 - Audience and entry trigger.
 - Offer or conversion goal.
 - Brand voice and constraints.
+- Copy style profile, if the user has one.
 - Number of messages and timing.
 - Campaign type: welcome, lead nurture, quote follow-up, abandoned inquiry, post-purchase, review request, winback, or re-engagement.
 - Contact attributes needed for personalization.
@@ -25,6 +26,8 @@ Gather or infer:
 - Backend events or webhooks needed to support the flow.
 
 If the user does not specify a campaign type, choose the closest fit from the entry trigger and goal. Use `references/drip-playbooks.md` when available for timing, assets, suppression rules, and backend event defaults.
+
+If the user does not specify brand voice, use `references/copy-style-profiles.md` when available to choose a conservative default and state the choice in the campaign brief.
 
 ## Output Structure
 
@@ -58,6 +61,7 @@ Handle prompts like:
 - "Build a Brevo nurture campaign for free estimate requests."
 - "Draft winback emails for inactive customers."
 - "Map the backend events and contact attributes needed for this drip."
+- "Write the sequence in a warm professional voice."
 
 ## Campaign Type Defaults
 

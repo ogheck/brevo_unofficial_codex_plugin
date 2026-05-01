@@ -194,6 +194,7 @@ The bundled skills prohibit direct sending from Codex. They require explicit con
 - `docs/brevo-token-setup.md`
 - `docs/backend-patterns.md`
 - `docs/attribute-mapping.md`
+- `docs/copy-style-profiles.md`
 - `docs/drip-campaign-workflow.md`
 - `docs/drip-campaign-playbooks.md`
 - `docs/campaign-qa-workflow.md`
