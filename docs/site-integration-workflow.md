@@ -25,6 +25,12 @@ Prefer the closest template:
 - `examples/express-endpoint/`
 - `examples/static-html-plus-serverless/`
 
+You can generate a starter copy with:
+
+```bash
+python3 scripts/create_integration_stub.py --runtime nextjs-route-handler --target ./brevo-lead-capture
+```
+
 ## Implementation Rules
 
 - Keep Brevo API calls server-side.

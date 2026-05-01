@@ -87,6 +87,7 @@ def main() -> int:
     checks = [
         run_check("plugin package validation", [sys.executable, "scripts/validate_plugin.py"]),
         run_check("markdown link validation", [sys.executable, "scripts/check_markdown_links.py"]),
+        run_check("integration generator tests", [sys.executable, "scripts/test_integration_generator.py"]),
         run_check("backend example tests", [sys.executable, "scripts/test_examples.py"], env=env),
     ]
 

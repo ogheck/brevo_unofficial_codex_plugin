@@ -61,6 +61,7 @@ Done:
 - Added release preflight script.
 - Added GitHub Actions validation workflow.
 - Confirmed the initial GitHub Actions validation run passed.
+- Added backend integration stub generator and tests.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -351,6 +352,7 @@ Done:
 - Refresh the GitHub marketplace cache with `codex plugin marketplace upgrade`.
 - Add release preflight script.
 - Add GitHub Actions validation workflow.
+- Add backend integration stub generator tests.
 
 Remaining tasks:
 
@@ -367,6 +369,8 @@ Added files:
 - `examples/express-endpoint/test/brevoLead.test.mjs`
 - `examples/static-html-plus-serverless/test/brevo-lead.test.mjs`
 - `scripts/test_examples.py`
+- `scripts/create_integration_stub.py`
+- `scripts/test_integration_generator.py`
 - `scripts/check_markdown_links.py`
 - `scripts/release_preflight.py`
 - `.github/workflows/validate.yml`
@@ -418,7 +422,7 @@ Status: future
 
 Possible features:
 
-- CLI helper that generates backend endpoint stubs from selected runtime.
+- CLI helper that generates backend endpoint stubs from selected runtime. Added `scripts/create_integration_stub.py`.
 - Attribute mapping assistant that compares local form fields to Brevo contact attributes.
 - Drip copy style profiles for different projects.
 - Campaign brief generator from website content.

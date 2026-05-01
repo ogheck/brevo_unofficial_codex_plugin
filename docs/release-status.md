@@ -8,6 +8,7 @@ Status: not ready to tag.
 
 - Plugin validation passes with `python3 scripts/validate_plugin.py`.
 - Markdown link checks pass with `python3 scripts/check_markdown_links.py`.
+- Integration generator tests pass with `python3 scripts/test_integration_generator.py`.
 - All backend example tests pass with `python3 scripts/test_examples.py`.
 - Release preflight passes in non-strict mode with `python3 scripts/release_preflight.py`.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.

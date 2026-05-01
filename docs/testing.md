@@ -22,6 +22,16 @@ The plugin validator checks:
 
 The markdown link checker verifies local Markdown links point at files inside this repository.
 
+## Integration Generator Tests
+
+Run:
+
+```bash
+python3 scripts/test_integration_generator.py
+```
+
+This verifies the backend stub generator lists runtimes, copies templates, refuses accidental overwrites, and supports dry runs.
+
 ## Example Endpoint Tests
 
 Run every example suite:
@@ -87,6 +97,7 @@ It runs:
 
 - Plugin package validation.
 - Markdown link validation.
+- Integration generator tests.
 - Backend example tests.
 - Release preflight with the marketplace cache check skipped.
 

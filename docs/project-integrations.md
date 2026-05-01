@@ -39,3 +39,9 @@ First implementation pass:
 6. Add spam control.
 7. Verify invalid email, valid submission, duplicate submission, and secret exposure checks.
 8. Document final manual Brevo dashboard steps.
+
+Template starter:
+
+```bash
+python3 scripts/create_integration_stub.py --runtime nextjs-route-handler --target ./brevo-lead-capture
+```

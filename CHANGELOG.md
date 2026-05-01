@@ -15,6 +15,7 @@
 - Added release preflight script for static release checks and live blocker reporting.
 - Added GitHub Actions workflow for plugin validation and example tests.
 - Confirmed the initial GitHub Actions validation run passed.
+- Added backend integration stub generator with tests.
 
 ## 0.1.1
 

@@ -76,6 +76,7 @@ Run before committing:
 ```bash
 python3 scripts/validate_plugin.py
 python3 scripts/check_markdown_links.py
+python3 scripts/test_integration_generator.py
 python3 scripts/test_examples.py
 python3 scripts/release_preflight.py
 ```
@@ -97,6 +98,24 @@ For CI runners without a local Codex marketplace cache:
 ```bash
 python3 scripts/release_preflight.py --skip-marketplace
 ```
+
+## Generate An Integration Stub
+
+List available backend runtimes:
+
+```bash
+python3 scripts/create_integration_stub.py --list
+```
+
+Create a starter endpoint from a template:
+
+```bash
+python3 scripts/create_integration_stub.py \
+  --runtime nextjs-route-handler \
+  --target ./brevo-lead-capture
+```
+
+The generator copies the selected example and adds `BREVO_INTEGRATION_NOTES.md` with required env vars and manual Brevo handoff reminders.
 
 ## Brevo Authentication
 

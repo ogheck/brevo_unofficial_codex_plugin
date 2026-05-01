@@ -6,6 +6,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 
 - Run `python3 scripts/validate_plugin.py`.
 - Run `python3 scripts/check_markdown_links.py`.
+- Run `python3 scripts/test_integration_generator.py`.
 - Run `python3 scripts/test_examples.py`.
 - Run `python3 scripts/release_preflight.py`.
 - Confirm the preflight reports a clean git worktree.
