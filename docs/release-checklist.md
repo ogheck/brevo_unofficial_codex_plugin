@@ -10,6 +10,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Run `python3 scripts/release_preflight.py`.
 - Confirm the preflight reports a clean git worktree.
 - Confirm GitHub Actions validation passes on the pushed commit.
+- Confirm the GitHub Actions run is for the commit being tagged.
 - Confirm plugin manifest, marketplace JSON, and MCP config parse as valid JSON.
 - Confirm no Brevo API key or MCP token is committed.
 - Confirm `.mcp.json` does not include campaign send, schedule, SMS, or WhatsApp campaign servers.

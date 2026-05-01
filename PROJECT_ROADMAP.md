@@ -60,6 +60,7 @@ Done:
 - Expanded README quickstart and development checks.
 - Added release preflight script.
 - Added GitHub Actions validation workflow.
+- Confirmed the initial GitHub Actions validation run passed.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.

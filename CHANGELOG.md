@@ -14,6 +14,7 @@
 - Added attribute mapping and analytics review workflow examples.
 - Added release preflight script for static release checks and live blocker reporting.
 - Added GitHub Actions workflow for plugin validation and example tests.
+- Confirmed the initial GitHub Actions validation run passed.
 
 ## 0.1.1
 
