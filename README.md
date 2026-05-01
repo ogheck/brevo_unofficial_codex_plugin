@@ -77,12 +77,19 @@ Run before committing:
 python3 scripts/validate_plugin.py
 python3 scripts/check_markdown_links.py
 python3 scripts/test_examples.py
+python3 scripts/release_preflight.py
 ```
 
 If your system `node` is unavailable, provide `NODE_BIN`:
 
 ```bash
 NODE_BIN="/path/to/node" python3 scripts/test_examples.py
+```
+
+Use strict live mode only after `BREVO_MCP_TOKEN` is set and the Codex app smoke test is ready:
+
+```bash
+python3 scripts/release_preflight.py --strict-live
 ```
 
 ## Brevo Authentication

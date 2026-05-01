@@ -57,6 +57,22 @@ npm test
 
 These cover invalid email handling, honeypot behavior, CORS where applicable, contact creation payloads, and duplicate-contact updates.
 
+## Release Preflight
+
+Run:
+
+```bash
+python3 scripts/release_preflight.py
+```
+
+This runs plugin validation, Markdown link validation, all backend example tests, checks whether the git worktree is clean, and checks whether the local GitHub marketplace cache matches the current repo revision.
+
+After `BREVO_MCP_TOKEN` is set and live smoke testing is ready, run:
+
+```bash
+python3 scripts/release_preflight.py --strict-live
+```
+
 ## Local Marketplace Smoke Test
 
 From this repository:

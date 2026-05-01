@@ -1,6 +1,6 @@
 # Brevo Helper Codex Plugin Roadmap
 
-Last updated: 2026-04-30
+Last updated: 2026-05-01
 
 ## Project Goal
 
@@ -58,6 +58,7 @@ Done:
 - Added analytics review workflow and example.
 - Added release status doc with current blockers.
 - Expanded README quickstart and development checks.
+- Added release preflight script.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
@@ -346,6 +347,7 @@ Done:
 - Add the local marketplace source with `codex plugin marketplace add`.
 - Add the GitHub marketplace source with `codex plugin marketplace add`.
 - Refresh the GitHub marketplace cache with `codex plugin marketplace upgrade`.
+- Add release preflight script.
 
 Remaining tasks:
 
@@ -363,6 +365,7 @@ Added files:
 - `examples/static-html-plus-serverless/test/brevo-lead.test.mjs`
 - `scripts/test_examples.py`
 - `scripts/check_markdown_links.py`
+- `scripts/release_preflight.py`
 
 Acceptance criteria:
 

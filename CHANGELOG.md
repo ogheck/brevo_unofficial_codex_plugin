@@ -12,6 +12,7 @@
 - Added campaign QA workflow, project integration tracker, and form schema fixture.
 - Added release status documentation for remaining app UI and live MCP auth smoke tests.
 - Added attribute mapping and analytics review workflow examples.
+- Added release preflight script for static release checks and live blocker reporting.
 
 ## 0.1.1
 

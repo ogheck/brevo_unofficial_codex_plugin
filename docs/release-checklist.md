@@ -7,6 +7,8 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Run `python3 scripts/validate_plugin.py`.
 - Run `python3 scripts/check_markdown_links.py`.
 - Run `python3 scripts/test_examples.py`.
+- Run `python3 scripts/release_preflight.py`.
+- Confirm the preflight reports a clean git worktree.
 - Confirm plugin manifest, marketplace JSON, and MCP config parse as valid JSON.
 - Confirm no Brevo API key or MCP token is committed.
 - Confirm `.mcp.json` does not include campaign send, schedule, SMS, or WhatsApp campaign servers.
@@ -25,6 +27,7 @@ Use this checklist before tagging or publishing a Brevo Helper release.
 - Install the plugin from `ogheck/brevo_unofficial_codex_plugin` after pushing.
 - Restart Codex and confirm the bundled skills load.
 - Set `BREVO_MCP_TOKEN` in the Codex runtime environment and verify read-oriented MCP tools initialize.
+- Run `python3 scripts/release_preflight.py --strict-live`.
 - Ask Codex to review a Brevo campaign and confirm it gives handoff steps instead of attempting to send.
 - Ask Codex to build a drip campaign and confirm it produces a plan, copy, backend needs, and manual Brevo setup steps.
 
