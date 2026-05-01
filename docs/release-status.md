@@ -19,6 +19,7 @@ Status: not ready to tag.
 - Installed plugin cache exists at the expected Brevo Helper version.
 - Marketplace auth policy now uses install-time authentication setup.
 - Guided onboarding verifier is available with `python3 scripts/brevo_onboarding_check.py`.
+- Fresh Codex app thread smoke test loaded Brevo Helper and reached Brevo MCP without attempting send, schedule, activation, or enrollment.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - GitHub Actions validation workflow ran successfully after being added.
 - Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
@@ -30,18 +31,20 @@ Status: not ready to tag.
 
 ## Blocked
 
-- Fresh Codex app thread smoke test still needs to confirm bundled Brevo Helper skills and read-oriented MCP tools are visible to the model.
+- Brevo rejected the fresh-thread read-only tools/list request because the Codex runtime IP is not authorized in Brevo.
+- IP to authorize in Brevo: `2600:4040:b50b:ca00:b862:6496:fcdd:4999`.
 
 ## Before Tagging
 
 1. Set `BREVO_MCP_TOKEN` in the Codex runtime environment.
 2. Restart Codex.
-3. Open a fresh Codex app thread after installing Brevo Helper.
-4. Verify the new `brevo-onboarding` skill loads in the fresh thread.
-5. Run `python3 scripts/brevo_onboarding_check.py`.
-6. Verify read-oriented Brevo MCP tools initialize.
-7. Confirm Codex can inspect lists, templates, senders, domains, and analytics.
-8. Confirm there is no direct send, schedule, launch, activation, or enrollment path.
-9. Confirm the latest GitHub Actions validation run passed.
-10. Move release notes from `Unreleased` into the tagged version section in `CHANGELOG.md`.
-11. Tag `v0.1.1`.
+3. Add `2600:4040:b50b:ca00:b862:6496:fcdd:4999` to Brevo Authorized IPs.
+4. Open a fresh Codex app thread after installing Brevo Helper.
+5. Verify the new `brevo-onboarding` skill loads in the fresh thread.
+6. Run `python3 scripts/brevo_onboarding_check.py`.
+7. Verify read-oriented Brevo MCP tools initialize.
+8. Confirm Codex can inspect lists, templates, senders, domains, and analytics.
+9. Confirm there is no direct send, schedule, launch, activation, or enrollment path.
+10. Confirm the latest GitHub Actions validation run passed.
+11. Move release notes from `Unreleased` into the tagged version section in `CHANGELOG.md`.
+12. Tag `v0.1.1`.

@@ -76,11 +76,12 @@ Done:
 - Refreshed the GitHub marketplace cache with the latest pushed revision.
 - Confirmed strict live release preflight passes with the current Brevo MCP token environment.
 - Confirmed Codex app install-state diagnostic passes after installing Brevo Helper.
+- Confirmed fresh Codex app thread loads Brevo Helper and reaches Brevo MCP without attempting live send actions.
 - Pushed initial commits to GitHub.
 
 Not done:
 
-- Confirm bundled Brevo Helper skills and MCP tools are visible inside a fresh Codex app thread.
+- Add the current Codex runtime IP to Brevo Authorized IPs and retry read-only account inspection.
 - Tag `v0.1.1` after install and MCP smoke tests pass.
 
 ## Phase 0: Charter And Safety Model

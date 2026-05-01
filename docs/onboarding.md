@@ -94,3 +94,9 @@ Expected behavior:
 - Read-oriented Brevo MCP tools initialize.
 - Codex can inspect setup without trying to send or activate live messaging.
 - Any live Brevo action is left as a manual dashboard handoff step.
+
+## Authorized IP Blocker
+
+If Brevo rejects a read-only MCP request because the Codex runtime IP is not authorized, add the reported IP address in Brevo's Authorized IPs settings and retry the fresh-thread smoke prompt.
+
+Do not loosen Brevo IP restrictions more broadly than needed. Add only the IP address Brevo reports for the current Codex runtime.
