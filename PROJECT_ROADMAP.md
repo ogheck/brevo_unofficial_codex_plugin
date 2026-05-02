@@ -70,6 +70,7 @@ Done:
 - Added Brevo MCP initialize smoke-test script for live read-endpoint checks.
 - Added Codex app marketplace/plugin install-state diagnostic.
 - Added guided install-time onboarding docs and verifier script.
+- Added fast MCP `tools/list` onboarding smoke to catch Brevo Authorized IP blockers before fresh-thread testing.
 - Switched marketplace authentication policy to install-time setup.
 - Added the local repo as a Codex marketplace source for smoke testing.
 - Added the GitHub repo as a Codex marketplace source for smoke testing.

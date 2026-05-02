@@ -142,18 +142,28 @@ def build_checks(args: argparse.Namespace) -> list[Check]:
         checks.append(Check("warn", "BREVO_API_KEY", "not set; only required for server-side app integrations"))
 
     if args.skip_mcp_smoke:
-        checks.append(Check("info", "MCP initialize smoke", "skipped by --skip-mcp-smoke"))
+        checks.append(Check("info", "MCP tools/list smoke", "skipped by --skip-mcp-smoke"))
     elif not has_process_env("BREVO_MCP_TOKEN"):
         checks.append(
             Check(
                 "blocked",
-                "MCP initialize smoke",
+                "MCP tools/list smoke",
                 "BREVO_MCP_TOKEN must be set in this process to run scripts/smoke_brevo_mcp.py",
             )
         )
     else:
-        ok, output = run_command([sys.executable, "scripts/smoke_brevo_mcp.py"])
-        checks.append(Check("ok" if ok else "blocked", "MCP initialize smoke", summarize_smoke_output(output)))
+        ok, output = run_command(
+            [
+                sys.executable,
+                "scripts/smoke_brevo_mcp.py",
+                "--server",
+                "brevo_contacts",
+                "--tools-list",
+                "--timeout",
+                "8",
+            ]
+        )
+        checks.append(Check("ok" if ok else "blocked", "MCP tools/list smoke", summarize_smoke_output(output)))
 
     checks.append(
         Check(

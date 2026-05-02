@@ -25,6 +25,7 @@
 - Added Codex app plugin install-state diagnostic for release smoke testing.
 - Added install-time Brevo onboarding skill, docs, and verifier script.
 - Switched marketplace authentication policy to `ON_INSTALL`.
+- Added MCP `tools/list` smoke coverage to catch Brevo Authorized IP blockers earlier.
 
 ## 0.1.1
 

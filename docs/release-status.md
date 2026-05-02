@@ -19,6 +19,7 @@ Status: not ready to tag.
 - Installed plugin cache exists at the expected Brevo Helper version.
 - Marketplace auth policy now uses install-time authentication setup.
 - Guided onboarding verifier is available with `python3 scripts/brevo_onboarding_check.py`.
+- Onboarding verifier now runs MCP `tools/list` to fail fast on Brevo Authorized IP blockers.
 - Fresh Codex app thread smoke test loaded Brevo Helper and reached Brevo MCP without attempting send, schedule, activation, or enrollment.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - GitHub Actions validation workflow ran successfully after being added.

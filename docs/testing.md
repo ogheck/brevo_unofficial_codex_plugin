@@ -111,6 +111,12 @@ python3 scripts/smoke_brevo_mcp.py
 
 This checks each bundled read-oriented MCP endpoint and does not print the token.
 
+To also catch Brevo Authorized IP or tool-listing authorization blockers:
+
+```bash
+python3 scripts/smoke_brevo_mcp.py --tools-list
+```
+
 For the guided install-time setup check, run:
 
 ```bash
@@ -212,6 +218,8 @@ python3 scripts/brevo_onboarding_check.py
 ```
 
 Add `--require-api-key` when the target app integration needs server-side `BREVO_API_KEY`.
+
+The onboarding check runs a focused `brevo_contacts` `tools/list` MCP smoke by default so Brevo Authorized IP blockers surface before opening a fresh Codex thread.
 
 ## No-Direct-Send Review
 

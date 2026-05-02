@@ -63,7 +63,7 @@ The verifier checks:
 - Marketplace auth policy is install-time.
 - `BREVO_MCP_TOKEN` is present in the current process or macOS launch environment.
 - `BREVO_API_KEY` is present when required.
-- Bundled read-oriented MCP endpoints initialize when a token is available.
+- The contacts MCP endpoint initializes and exposes `tools/list` when a token is available, which catches Brevo Authorized IP blockers quickly.
 - No default send, schedule, SMS, WhatsApp, or webhook-management MCP endpoint is bundled.
 
 The verifier does not print secrets.
@@ -97,6 +97,6 @@ Expected behavior:
 
 ## Authorized IP Blocker
 
-If Brevo rejects a read-only MCP request because the Codex runtime IP is not authorized, add the reported IP address in Brevo's Authorized IPs settings and retry the fresh-thread smoke prompt.
+If Brevo rejects a read-only MCP request because the Codex runtime IP is not authorized, `python3 scripts/brevo_onboarding_check.py` should fail fast and report the IP address to add. Add that IP address in Brevo's Authorized IPs settings and retry the onboarding check before retrying the fresh-thread smoke prompt.
 
 Do not loosen Brevo IP restrictions more broadly than needed. Add only the IP address Brevo reports for the current Codex runtime.
