@@ -33,13 +33,13 @@ Status: not ready to tag.
 ## Blocked
 
 - Brevo rejected the fresh-thread read-only tools/list request because the Codex runtime IP is not authorized in Brevo.
-- IP to authorize in Brevo: `2600:4040:b50b:ca00:b862:6496:fcdd:4999`.
+- Run `python3 scripts/brevo_onboarding_check.py --warn-only` and add the IP it reports to Brevo Authorized IPs.
 
 ## Before Tagging
 
 1. Set `BREVO_MCP_TOKEN` in the Codex runtime environment.
 2. Restart Codex.
-3. Add `2600:4040:b50b:ca00:b862:6496:fcdd:4999` to Brevo Authorized IPs.
+3. Run `python3 scripts/brevo_onboarding_check.py --warn-only` and add its reported IP to Brevo Authorized IPs.
 4. Open a fresh Codex app thread after installing Brevo Helper.
 5. Verify the new `brevo-onboarding` skill loads in the fresh thread.
 6. Run `python3 scripts/brevo_onboarding_check.py`.
