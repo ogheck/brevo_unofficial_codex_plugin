@@ -23,7 +23,7 @@ Status: not ready to tag.
 - Fresh Codex app thread smoke test loaded Brevo Helper and reached Brevo MCP without attempting send, schedule, activation, or enrollment.
 - CI-safe release preflight is available with `python3 scripts/release_preflight.py --skip-marketplace`.
 - GitHub Actions validation workflow ran successfully after being added.
-- Local marketplace source was added with `codex plugin marketplace add "/Users/danielheck/Documents/New project"`.
+- Local marketplace source was added from a checkout with `codex plugin marketplace add "/path/to/brevo_unofficial_codex_plugin"`.
 - GitHub marketplace source was added with `codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin`.
 - GitHub marketplace cache was refreshed with `codex plugin marketplace upgrade brevo-unofficial`; rerun before tagging so it matches the exact tagged commit.
 - CLI smoke-test examples were added in `docs/cli-smoke-test-examples.md`.

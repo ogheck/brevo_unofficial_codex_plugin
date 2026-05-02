@@ -15,7 +15,7 @@ codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin
 Add this local checkout as a development marketplace:
 
 ```bash
-codex plugin marketplace add "/Users/danielheck/Documents/New project"
+codex plugin marketplace add "/path/to/brevo_unofficial_codex_plugin"
 ```
 
 Refresh the GitHub-backed marketplace cache:
@@ -28,7 +28,7 @@ Expected output:
 
 ```text
 Upgraded marketplace `brevo-unofficial` to the latest configured revision.
-Installed marketplace root: /Users/danielheck/.codex/.tmp/marketplaces/brevo-unofficial
+Installed marketplace root: <codex-home>/.tmp/marketplaces/brevo-unofficial
 ```
 
 ## Static Release Preflight

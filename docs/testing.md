@@ -140,7 +140,7 @@ It runs:
 From this repository:
 
 ```bash
-codex plugin marketplace add "/Users/danielheck/Documents/New project"
+codex plugin marketplace add "/path/to/brevo_unofficial_codex_plugin"
 ```
 
 Restart Codex, open the plugin directory, choose the "Brevo Unofficial" marketplace, and install "Brevo Helper".

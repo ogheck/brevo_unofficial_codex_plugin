@@ -4,6 +4,10 @@ Unofficial Codex plugin for planning Brevo campaigns and building website/backen
 
 This plugin is not made by, endorsed by, or supported by Brevo.
 
+## Status
+
+Brevo Helper is a pre-release community plugin. It is designed for safe setup, planning, review, and backend integration work. It intentionally does not expose default tools for sending, scheduling, launching, activating, or enrolling contacts from Codex.
+
 ## What It Includes
 
 - Focused Brevo MCP server configuration for contacts, lists, templates, analytics, senders, and domains.
@@ -12,7 +16,7 @@ This plugin is not made by, endorsed by, or supported by Brevo.
 
 ## Install
 
-Add the GitHub-backed marketplace:
+For normal use, add the GitHub-backed marketplace:
 
 ```bash
 codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin
@@ -20,12 +24,12 @@ codex plugin marketplace add ogheck/brevo_unofficial_codex_plugin
 
 Then open the Codex plugin directory, choose the "Brevo Unofficial" marketplace, and install "Brevo Helper".
 
-The marketplace uses install-time authentication policy, so complete the Brevo setup checklist during install. See [Brevo Helper Onboarding](docs/onboarding.md).
+The marketplace uses install-time authentication policy, so complete the Brevo setup checklist during install. Do not paste Brevo tokens into chat or commit them to this repository. See [Brevo Helper Onboarding](docs/onboarding.md).
 
-For local development from this checkout:
+For local development from a cloned checkout:
 
 ```bash
-codex plugin marketplace add "/Users/danielheck/Documents/New project"
+codex plugin marketplace add "/path/to/brevo_unofficial_codex_plugin"
 ```
 
 Restart Codex after installing or changing the plugin.
@@ -222,6 +226,12 @@ Codex should:
 ## Safety Defaults
 
 The bundled skills prohibit direct sending from Codex. They require explicit confirmation before bulk importing or deleting contacts, or changing sender/domain/webhook configuration.
+
+## Contributing And Security
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) before opening changes. Keep the default plugin read-oriented and no-send.
+
+See [SECURITY.md](SECURITY.md) for secret-handling and vulnerability reporting guidance.
 
 ## Project Docs
 

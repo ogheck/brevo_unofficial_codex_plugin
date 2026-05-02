@@ -28,6 +28,12 @@ RAW_SECRET_PATTERNS = (
     re.compile(r"xkeysib-[A-Za-z0-9_-]{16,}"),
 )
 
+LOCAL_PATH_PATTERNS = (
+    re.compile(r"/Users/(?!your-|example|path/)[A-Za-z0-9._-]+"),
+    re.compile(r"/home/(?!your-|example|path/)[A-Za-z0-9._-]+"),
+    re.compile(r"C:\\Users\\(?!your-|example)[^\\\s]+"),
+)
+
 ENV_ASSIGNMENT_PATTERN = re.compile(r"\b(BREVO_API_KEY|BREVO_MCP_TOKEN)\s*=\s*(['\"])(.*?)\2")
 SAFE_PLACEHOLDER_VALUES = {
     "",
@@ -153,11 +159,13 @@ def validate_skills(errors: list[str]) -> None:
 
 def validate_text_scan(errors: list[str]) -> None:
     placeholder_marker = "[TO" "DO"
+    skipped_parts = {".git", "__pycache__", "node_modules", "dist", "build", "coverage"}
+    skipped_suffixes = {".pyc", ".pyo", ".png", ".jpg", ".jpeg", ".gif", ".webp"}
 
     for path in ROOT.rglob("*"):
-        if ".git" in path.parts or not path.is_file():
+        if skipped_parts.intersection(path.parts) or not path.is_file():
             continue
-        if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".webp"}:
+        if path.suffix.lower() in skipped_suffixes:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
         if placeholder_marker in text:
@@ -165,6 +173,9 @@ def validate_text_scan(errors: list[str]) -> None:
         for pattern in RAW_SECRET_PATTERNS:
             if pattern.search(text):
                 errors.append(f"Potential committed Brevo secret in {rel(path)}")
+        for pattern in LOCAL_PATH_PATTERNS:
+            if pattern.search(text):
+                errors.append(f"Machine-specific local path in {rel(path)}")
         for match in ENV_ASSIGNMENT_PATTERN.finditer(text):
             value = match.group(3).strip()
             if value.startswith("<") and value.endswith(">"):
